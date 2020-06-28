@@ -1,0 +1,55 @@
+!!!几何非线性
+
+finish
+/clear
+/filname,ex04c
+
+/prep7
+L=100       !!跨高
+a=5.0       !!矢高
+Ex=1.0e7    !!弹性模量 
+Fy=5000     !!中点的集中载荷   
+Area=0.32   !!截面面积
+Iz=1.0      !!截面惯性矩
+h=0.5       !!截面宽度
+NN=50       !!分段数量
+
+!!定义材料特性，单元类型，常数
+/prep7
+et,1,beam3
+r,1,Area,Iz,h
+mp,ex,1,Ex
+
+!!建立有限元模型
+*DO,i,1,NN+1
+    x=L/NN*(i-1)
+    y=a*sin(3.1415926*x/L)
+    n,i,x,y,0
+*ENDDO
+*DO,i,1,NN
+    e,i,i+1
+*ENDDO
+
+!!施加约束和荷载
+d,1,ux,0
+d,1,uy,0
+d,NN+1,ux,0
+d,NN+1,uy,0
+nsel,all
+f,NN/2+1,fy,-Fy
+
+/solu
+time,1
+antype,0       !!求解类型（静力
+nlgeom,on
+outres,all,all
+nsubst,500
+arclen,on
+solve
+
+/post26
+nsol,2,NN/2+1,u,y
+prod,3,2,,,,,,-1,1,1
+prod,4,1,,,,,,Fy,1,1
+xvar,3
+plvar,4

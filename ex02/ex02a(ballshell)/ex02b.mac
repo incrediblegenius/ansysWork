@@ -1,0 +1,131 @@
+!!Class 2 单层球面网壳的临界荷载
+
+finish
+/clear
+/filname,ex02b
+
+!!! input parameter
+/prep7
+PI=3.1415926535
+R=15    !!球面半径
+f=5     !!网壳矢高
+Nr=6    !!径向划分数量
+Nc=24   !!环向划分数量
+alf=acos((R-f)/R)*180/PI        !!圆心角(ard)
+alf0=90-alf                     !!起始圆心角
+dalf=alf/Nr                     !!每个网格对应圆心角(ard)
+dbeta=360/Nc
+Ex=2.06e11                      !!弹性模量
+Nu=0.3                          !!泊松比
+b=0.03                        !!方管截面宽度
+h=0.15                          !!方管截面高度
+t=0.006                         !!方管壁厚
+Fz=10000                        !!节点载荷
+
+!!前处理
+/prep7
+et,1,beam188                !!define units' type
+keyopt,1,3,2                !!开启高阶形函数（重要），beam188
+keyopt,1,1,1                !!在计算屈曲分析时需要打开翘曲自由度（重要，BEAM188）
+mp,ex,1,Ex                  !!define the character of material
+mp,nuxy,1,Nu
+sectype,1,beam,hrec,,1      !!定义截面类型
+secoffset,cent              !!截面按形心对中
+secdata,b,h,t,t,t,t         !!定义截面参数
+
+!!定义节点
+Nnode=Nc*Nr+1           !!节点总数
+k,Nnode+1,0,0,0         !!定义球心0，0，0
+k,Nnode,0,0,R           !!顶点0，0，R
+csys,2                  !!球面坐标系
+*do,i,1,Nr
+  *do,j,1,Nc
+    inode=Nc*(i-1)+j        !!当前节点号
+    k,inode,R,(j-1)*dbeta,alf0+(i-1)*dalf   !!定义inode的球面坐标
+  *enddo
+*enddo
+csys,0                      !!直角坐标系
+
+!!定义单元
+! type,1
+! secnum,1
+! mat,1
+*do,i,1,Nr
+  *do,j,1,Nc
+    inode=Nc*(i-1)+j        !!每环首节点号
+    *if,j,ne,Nc,then
+      l,inode,inode+1,Nnode+1
+    *else
+      l,inode,inode-Nc+1,Nnode+1
+    *endif
+  *enddo
+*enddo
+*do,i,1,Nr                  !!定义径向节点
+  *do,j,1,Nc
+    inode=Nc*(i-1)+j
+    *if,i,ne,Nr,then
+      l,inode,inode+Nc,Nnode+1
+    *else
+      l,inode,Nnode,Nnode+1
+    *endif
+  *enddo
+*enddo
+
+!!增加斜撑(附加)
+*do,i,1,NR-1
+ *do,j,1,NC
+   inode=NC*(i-1)+j
+   *if,j,ne,NC,then
+     L,inode,inode+NC+1
+   *else
+     L,inode,inode+1
+   *endif
+ *enddo
+*enddo
+
+!!施加约束
+ksel,s,,,1,Nc
+dk,all,ux,0
+dk,all,uy,0
+dk,all,uz,0
+
+!!施加荷载
+ksel,s,,,Nc+1,Nnode
+fk,all,fz,-Fz
+ksel,all
+
+!!单元划分
+lsel,all
+latt,1,1,1,,Nnode+1
+esize,,6
+lmesh,all
+dtran
+ftran
+
+!!进行静力分析
+/solu
+antype,0
+pstres,on       !!打开预应力开关
+solve
+finish          !!结束求解
+
+!!屈曲分析
+/solu
+antype,1
+bucopt,lanb,10
+mxpand,10,,,1
+solve
+
+!!后处理
+/post1
+set,1,1
+plnsol,u,z,0,1.0
+
+!!显示设置
+/view,1,1,1,1
+/ang,1
+/ang,1,-120,zs,1
+/rep,fast
+
+
+    

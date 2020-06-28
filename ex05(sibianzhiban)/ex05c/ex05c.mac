@@ -1,0 +1,120 @@
+!!弹性四边板的受压求解
+
+finish
+/clear
+/filname,ex05c
+
+/prep7
+t=0.01          !厚度   
+b=1.0           !!板宽度
+a=1.0           !!板长度    
+Ex=2.06e11      !!弹性模量
+Nu=0.3          !泊松比
+Nx=1000*5000    !!载荷
+flag=1          !1表板内有约束，2表无
+
+
+!定义类型，常数，材料特性
+et,1,shell181
+r,1,t
+mp,ex,1,Ex
+mp,prxy,1,Nu
+
+!!建立几何模型 
+k,1,-a/2,-b/2,0
+k,2,a/2,-b/2,0
+k,3,a/2,b/2,0
+k,4,-a/2,b/2,0
+a,1,2,3,4       !!建立一个面
+
+!!单元划分
+aatt,1,1,1,0
+aesize,all,5*t      !!设置单元划分尺寸
+amesh,all
+
+!!施加约束(两边简支边)
+DL,2,,uz,0
+DL,4,,uz,0
+
+!!给两个非加载边施加约束
+DL,1,,uz,0
+DL,3,,uz,0
+! DL,1,,uy,0
+! DL,3,,uy,0
+dtran
+
+!!施加x方向的约束，消除刚体位移
+nsel,s,loc,x,0,0
+nsel,r,loc,y,b/2,b/2
+d,all,ux,0
+nsel,s,loc,x,0,0
+nsel,r,loc,y,-b/2,-b/2
+d,all,ux,0
+nsel,all
+
+!!施加版面内约束
+*IF,flag,eq,1,THEN
+    DL,1,,uy,0
+    DL,3,,uy,0
+    dtran
+*ELSE
+    nsel,s,loc,x,0,0
+    nsel,r,loc,y,0,0
+    d,all,uy,0
+    nsel,all
+*ENDIF
+
+!!施加荷载
+SFL,2,PRES,Nx
+SFL,4,PRES,Nx
+sftran
+
+!!静力解
+/solu
+antype,0
+pstres,on
+solve
+finish
+
+!!屈曲分析
+/solu
+antype,1
+bucopt,lanb,4
+mxpand,4,,,1
+solve
+
+/post1
+set,first
+nsort,u,sum
+*get,n1,sort,0,imax     !!*get非常重要，把排序后的最大的节点号写入n1
+*get,dz,node,n1,u,z     !!把n1号在z方向位移写入dz
+
+!!施加初始缺陷
+/prep7
+D0=a/50/dz
+upgeom,D0,1,1,'ex05c','rst'      !!（放大缺陷）更新rst模型，读出ex05b.rst第一个荷载部的第一个放大D0
+finish
+
+
+!!补充定义理想弹塑性
+/prep7
+Fy=235e6
+tb,bkin,1,1,2,1         !!定义材料弹塑性
+tbdata,,Fy,0,,,,
+
+
+
+/solu
+time,1
+antype,0
+nlgeom,on
+nsubst,500
+outres,all,all
+solve
+finish
+
+/post26
+nsol,2,n1,u,z,
+nsol,3,394,u,z,
+
+

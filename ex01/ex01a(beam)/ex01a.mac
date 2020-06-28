@@ -1,0 +1,48 @@
+!! example ex01a
+!!
+finish
+/clear
+/filename,ex01a
+
+!! parameter 
+/prep7
+L=6         !!跨度
+NN=90       !!分段数量
+Ex=2.00e11  !!弹性模量
+h=0.4       !!方管截面宽
+b=0.2       !!截面高度
+t=0.01      !!方管壁厚
+ep=0.002    !!边缘应变
+Area=b*h-(b-2*t)*(h-2*t)    !!截面面积
+Iz=(b*h**3-(b-2*t)*(h-2*t)**3)/12   !!截面惯性矩
+Wz=Iz/(h/2)                 !!
+Mz=ep*Ex*Wz                 !!
+
+
+/prep7
+et,1,beam3      !!
+mp,ex,1,Ex      !!
+r,1,Area,Iz,h   
+dx=L/NN         !!
+*do,i,1,NN+1
+ n,i,(i-1)*dx,0,0   
+*enddo
+*do,i,1,NN
+ e,i,i+1
+*enddo
+d,1,ux,0
+d,1,uy,0
+d,NN+1,uy,0
+f,1,mz,-Mz
+f,NN+1,mz,Mz
+
+!!!solute
+/solu
+time,2
+nsubst,500
+nlgeom,on
+solve
+
+/post1
+/eshape,1
+plnsol,u,y,0,1.0,

@@ -1,0 +1,81 @@
+!!!!ex03b,应力刚度
+
+finish
+/clear
+/filname,ex03b
+
+!!input parameter
+/prep7
+Ex=2.0e20
+Area=0.01
+L=1
+k=1000
+p=1000
+NN=3    !!定义弹簧数量
+
+!!定义单元类型，常数，材料类型
+et,1,link180
+mp,ex,1,Ex
+r,1,Area
+et,2,combin14
+r,2,k
+
+!!定义节点
+*DO,i,1,NN+2
+    n,i,0,(i-1)*L
+*ENDDO
+*DO,i,2,NN+1
+    n,i+1000,1,(i-1)*L
+*ENDDO
+
+!!定义杆单元
+type,1
+real,1
+mat,1
+*DO,i,1,NN+1
+    e,i,i+1
+*ENDDO
+
+!!定义弹簧单元
+type,2
+real,2
+mat,2
+*DO,i,2,NN+1
+    e,i,i+1000
+*ENDDO
+
+!!施加约束
+d,all,uz,0
+d,1,ux,0
+d,1,uy,0
+d,NN+2,ux,0
+*DO,i,2,NN+1
+    d,i+1000,all,0
+*ENDDO
+
+!!施加载荷
+f,NN+2,fy,-p
+
+!!静力分析
+/solu
+antype,0
+pstres,on
+solve
+finish
+
+!!屈曲分析
+/solu
+antype,1
+bucopt,lanb,NN      !!使用子空间迭代法，可获得稳定解，也可用lanb
+mxpand,NN,,,1
+solve
+
+!!后处理
+/post1
+set,1,1
+esel,s,type,,1
+/eshape,1
+plnsol,u,x,0,1.0    !画x方向变形图 
+
+!!读取刚度矩阵
+getK,'Ex03b',1

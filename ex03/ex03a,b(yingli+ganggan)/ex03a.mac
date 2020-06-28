@@ -1,0 +1,67 @@
+!!!应力刚度(拉力作用不会屈曲，但会改变刚度)
+
+finish
+/clear
+/filname,ex03a
+
+!!parameter input
+/prep7
+Ex=2.0e11
+Area=0.01
+L=1
+k=1000
+p=1000
+
+!!定义单元类型，实常数，材料类型
+et,1,link180  !!一种二力杆
+mp,ex,1,Ex
+r,1,Area        !!截面面积
+et,2,combin14   !!定义线性弹簧
+r,2,k           !!定义弹簧k
+
+!!定义节点
+n,1,0,0,0
+n,2,0,L,0
+n,3,0.5,L,0
+
+!!定义一个杆单元
+type,1
+real,1
+mat,1   !!材料类型1
+e,1,2   !!在1，2节点间
+
+!!定义弹簧单元
+type,2
+real,2
+mat,2
+e,2,3
+
+!!施加约束
+d,1,ux,0
+d,1,uy,0
+d,1,uz,0
+d,2,uz,0
+d,3,ux,0
+d,3,uy,0
+d,3,uz,0
+
+!!施加荷载
+f,2,fy,-p
+
+!!进行静力分析
+/solu
+antype,0
+pstres,on
+solve
+finish
+
+!!屈曲分析
+antype,1
+bucopt,lanb,1
+mxpand,1,,,1
+solve
+
+/post1
+set,1,1
+plnsol,u,x,0,1.0
+

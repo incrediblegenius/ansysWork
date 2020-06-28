@@ -1,0 +1,46 @@
+!!求解单层球面网壳的临界荷载
+!!铝合金板式节点网壳的屈曲荷载
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+finish
+/clear
+/filname,ex02d
+
+/PREP7
+!!输入材料，定义单元
+/input,Ex02d_mat,txt    !!外部定义，放在当前工作目录
+
+!!输入节点坐标
+/input,Ex02d_node,txt    !!同上
+
+!!定义单元
+/input,Ex02d_ele,txt    !!同上
+
+!!节点约束
+/input,Ex02d_bc,txt
+
+!!定义载荷
+/input,Ex02d_load,txt
+
+!!静力分析
+/solu
+antype,0       
+pstres,on       !!!!打开预应力开关
+solve
+finish
+
+!!线性屈曲分析，重要点：BEAM188的自由度个数
+/solu
+antype,1        !!定义Eigen buckling分析
+bucopt,lanb,3    !定义模态数量和提取方法
+mxpand,3,,,1        !!扩展模态并计算单元
+solve
+finish
+
+!!显示屈曲模态
+/post1
+set,1,1,
+plnsol,u,z,0,1.0    !!画图
+
+
+!!SUM:BEAM188的两个重要点， 高阶形函数keyopt 1,3,2和翘曲自由度keyopt 1,1,1!!
