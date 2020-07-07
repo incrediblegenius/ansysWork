@@ -1,0 +1,5 @@
+$# LS-PrePost command file created by LS-PrePost 4.2 (Beta) - 23Jun2014(09:00) -64bit-Window
+$# Created on Jul-07-2020 (21:02:21)
+open d3plot "E:\desktop\ansysWork\LSdyna\d3plot"
+ac
+anim forward

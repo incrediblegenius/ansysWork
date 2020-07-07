@@ -1,0 +1,2083 @@
+      Date: 07/07/2020      Time: 21:05:44  
+
+     ___________________________________________________
+     |                                                 |
+     |  Livermore  Software  Technology  Corporation   |
+     |                                                 |
+     |  7374 Las Positas Road                          |
+     |  Livermore, CA 94551                            |
+     |  Tel: (925) 449-2500  Fax: (925) 449-2507       |
+     |  www.lstc.com                                   |
+     |_________________________________________________|
+     |                                                 |
+     |  LS-DYNA, A Program for Nonlinear Dynamic       |
+     |  Analysis of Structures in Three Dimensions     |
+     |  Version : smp d R7.1.1    Date: 04/04/2014     |
+     |  Revision: 88541           Time: 09:35:54       |
+     |                                                 |
+     |  Features enabled in this version:              |
+     |    Shared Memory Parallel                       |
+     |    Interactive Graphics                         |
+     |    ANSYS Database format                        |
+     |    ANSYS License (ANSYS160)                     |
+     |                                                 |
+     |  Licensed to:                                   |
+     |  Issued by  : ANSYS                             |
+     |                                                 |
+     |  Platform   : WINDOWS X64                       |
+     |  OS Level   : Windows Vista/7/8 Server 2008/2012|
+     |  Compiler   : Intel Fortran XE 2013 MSVC++ 2010 |
+     |  Hostname   : LAPTOP-AIFMCGPI                   |
+     |  Precision  : Double precision (I8R8)           |
+     |  SVN Version: 88920                             |
+     |                                                 |
+     |  Unauthorized use infringes LSTC copyrights     |
+     |_________________________________________________|
+
+
+ Input file: e:\desktop\ansysw~1\lsdyna\a.k                                          
+
+ The native file format       : 64-bit small endian
+ Memory size from default     :    20000000
+
+ ********  notice  ********  notice  ********  notice  ********
+ *                                                            *
+ * This is the LS-DYNA Finite Element code.                   *
+ *                                                            *
+ * Neither LSTC nor the authors assume any responsibility for *
+ * the validity, accuracy, or applicability of any results    *
+ * obtained from this system. The user must verify his own    *
+ * results.                                                   *
+ *                                                            *
+ * LSTC endeavors to make the LS-DYNA code as complete,       *
+ * accurate and easy to use as possible.                      *
+ * Suggestions and comments are welcomed.  Please report any  *
+ * errors encountered in either the documentation or results  *
+ * immediately to LSTC through your site focus.               *
+ *                                                            *
+ * Copyright (C) 1990-2014                                    *
+ * by Livermore Software Technology Corp. (LSTC)              *
+ * All rights reserved                                        *
+ *                                                            *
+ ********  notice  ********  notice  ********  notice  ********
+
+ Beginning of keyword reader                                   07/07/20 21:05:44
+ expanding   memory to    20000000 beginning of keyword reader
+ contracting memory to       22505  
+ expanding   memory to      217481  
+ expanding   memory to      676625  
+ expanding   memory to      706625  
+ expanding   memory to      766625  
+ expanding   memory to      787627  
+ expanding   memory to      895859  
+ expanding   memory to      991891  
+ expanding   memory to     1012891  
+ expanding   memory to     1051091  
+ expanding   memory to     1074528  
+ expanding   memory to     1123815  
+ expanding   memory to     1153502  
+ expanding   memory to     1480059  
+ expanding   memory to     1509746  
+ expanding   memory to     1923890  
+ expanding   memory to     1953577  
+ expanding   memory to     1975877  
+ expanding   memory to     2000126  
+
+ Memory required to process keyword     :     2000126 
+ contracting memory to           1 end of keyword reader
+
+ LS-DYNA will perform a structural only analysis 
+
+ LS-DYNA user input                                                      
+                         ls-dyna smp.88541 d            date 04/04/2014
+ expanding   memory to        2970 material, node and element data
+ expanding   memory to        3082 material added airbag porosity leakage 
+ contracting memory to        3082 material properties
+ expanding   memory to      285867 element data for composite material
+ expanding   memory to      351038 gradient of damage data
+ expanding   memory to      673260 user control for contact interfaces
+ expanding   memory to      702927 temp index array for node sorting
+ contracting memory to      673240 for boundary cond. vectorization
+ expanding   memory to      696248 arbitrary element numbering input
+ contracting memory to      673240 thick shell int. pt. strain
+ expanding   memory to      711803 spc cards
+ expanding   memory to     1955012 process element material data
+ expanding   memory to     1957013 load curve data
+ contracting memory to     1955019 user_define_loading_set
+ expanding   memory to     1955219 regularize time history data
+ contracting memory to     1955219 rigidwall definitions
+ expanding   memory to     1985933 nodal constraint sets
+ expanding   memory to     2147162 contact interfaces
+ expanding   memory to     2207536 implicit contact 1
+ expanding   memory to     2391602 implicit contact 2
+ expanding   memory to     4524771 contact segment data 1
+ contracting memory to     3568153 contact segment data 2
+ expanding   memory to     3900658 contact segment data 3
+ expanding   memory to     5421342 contact definition
+ expanding   memory to     5540405 rigid body
+ expanding   memory to     5715584 contact friction
+ expanding   memory to     6249995 joints
+ contracting memory to     6249995 accelerometers
+ expanding   memory to     6256395 non-reflecting silent boundary 1
+ expanding   memory to     6256495 rigid bodies for disp. termination
+ contracting memory to     6256495 transformation to move nodes
+ expanding   memory to     6315869 interfac for file
+ contracting memory to     6286185 thermal expansion 0
+ expanding   memory to     6286188 mat add cohesive 0
+ expanding   memory to     6286191 flexible body 2
+ contracting memory to     6286191 implicit joints
+ expanding   memory to     6286194 minimum contact gap for auto switching
+ expanding   memory to     6378226 initialization phase
+ 
+ *** Warning 30364 (INI+364)
+     Erosion has been enabled for contact id: 1
+ 
+ *** Warning 30364 (INI+364)
+     Erosion has been enabled for contact id: 2
+ 
+ *** Warning 30364 (INI+364)
+     Erosion has been enabled for contact id: 3
+
+     slave surface of interface   =         1
+     type                         =        14
+     surface timestep             = 2.595E-02
+     controlling slave node ID    =      7113
+     part ID of slave node        =         2
+     current minimum time step    = 2.595E-02
+
+     master surface of interface  =         1
+     type                         =        14
+     surface timestep             = 1.445E-02
+     controlling master node ID   =       550
+     part ID of master node       =         1
+     current minimum time step    = 1.445E-02
+
+     slave surface of interface   =         2
+     type                         =        14
+     surface timestep             = 2.595E-02
+     controlling slave node ID    =     20088
+     part ID of slave node        =         3
+     current minimum time step    = 1.445E-02
+
+     master surface of interface  =         2
+     type                         =        14
+     surface timestep             = 1.445E-02
+     controlling master node ID   =       550
+     part ID of master node       =         1
+     current minimum time step    = 1.445E-02
+
+     slave surface of interface   =         3
+     type                         =        14
+     surface timestep             = 2.595E-02
+     controlling slave node ID    =     20088
+     part ID of slave node        =         3
+     current minimum time step    = 1.445E-02
+
+     master surface of interface  =         3
+     type                         =        14
+     surface timestep             = 2.595E-02
+     controlling master node ID   =      7113
+     part ID of master node       =         2
+     current minimum time step    = 1.445E-02
+
+ The LS-DYNA time step size should not exceed     1.445E-02
+ to avoid contact instabilities.  If the step size is
+ bigger then scale the penalty of the offending surface.
+
+ S t o r a g e   a l l o c a t i o n   
+
+ Memory required to begin solution      :     6378226 
+ Additional dynamically allocated memory:     3398639 
+                                   Total:     9776865 
+       1 t 0.0000E+00 dt 1.30E-02 flush i/o buffers            07/07/20 21:05:46
+       1 t 0.0000E+00 dt 1.30E-02 write d3plot file            07/07/20 21:05:46
+     solid element        1665  failed at time  1.3005E-02
+     solid element        1669  failed at time  1.3005E-02
+     solid element        1673  failed at time  1.3005E-02
+     solid element        1681  failed at time  1.3005E-02
+     node  number        2331 deleted at time  1.3005E-02
+     solid element        1685  failed at time  1.3005E-02
+     node  number        2312 deleted at time  1.3005E-02
+     solid element        1689  failed at time  1.3005E-02
+     solid element        1697  failed at time  1.3005E-02
+     node  number        2332 deleted at time  1.3005E-02
+     solid element        1701  failed at time  1.3005E-02
+     node  number        2313 deleted at time  1.3005E-02
+     solid element        1705  failed at time  1.3005E-02
+     solid element        1713  failed at time  1.3005E-02
+     node  number        2333 deleted at time  1.3005E-02
+     solid element        1717  failed at time  1.3005E-02
+     node  number        2314 deleted at time  1.3005E-02
+     solid element        1721  failed at time  1.3005E-02
+     solid element        1729  failed at time  1.3005E-02
+     node  number        2334 deleted at time  1.3005E-02
+     solid element        1733  failed at time  1.3005E-02
+     node  number        2315 deleted at time  1.3005E-02
+     solid element        1737  failed at time  1.3005E-02
+     solid element        1745  failed at time  1.3005E-02
+     node  number        2335 deleted at time  1.3005E-02
+     solid element        1749  failed at time  1.3005E-02
+     node  number        2316 deleted at time  1.3005E-02
+     solid element        1753  failed at time  1.3005E-02
+     solid element        1761  failed at time  1.3005E-02
+     node  number        2336 deleted at time  1.3005E-02
+     solid element        1765  failed at time  1.3005E-02
+     node  number        2317 deleted at time  1.3005E-02
+     solid element        1769  failed at time  1.3005E-02
+     solid element        1777  failed at time  1.3005E-02
+     node  number        2337 deleted at time  1.3005E-02
+     solid element        1781  failed at time  1.3005E-02
+     node  number        2318 deleted at time  1.3005E-02
+     solid element        1785  failed at time  1.3005E-02
+     solid element        1793  failed at time  1.3005E-02
+     node  number        2338 deleted at time  1.3005E-02
+     solid element        1797  failed at time  1.3005E-02
+     node  number        2319 deleted at time  1.3005E-02
+     solid element        1801  failed at time  1.3005E-02
+     solid element        1809  failed at time  1.3005E-02
+     node  number        2339 deleted at time  1.3005E-02
+     solid element        1813  failed at time  1.3005E-02
+     node  number        2320 deleted at time  1.3005E-02
+     solid element        1817  failed at time  1.3005E-02
+     solid element        1825  failed at time  1.3005E-02
+     node  number        2340 deleted at time  1.3005E-02
+     solid element        1829  failed at time  1.3005E-02
+     node  number        2321 deleted at time  1.3005E-02
+     solid element        1833  failed at time  1.3005E-02
+     solid element        1841  failed at time  1.3005E-02
+     node  number        2341 deleted at time  1.3005E-02
+     solid element        1845  failed at time  1.3005E-02
+     node  number        2322 deleted at time  1.3005E-02
+     solid element        1849  failed at time  1.3005E-02
+     solid element        1857  failed at time  1.3005E-02
+     node  number        2342 deleted at time  1.3005E-02
+     solid element        1861  failed at time  1.3005E-02
+     node  number        2323 deleted at time  1.3005E-02
+     solid element        1865  failed at time  1.3005E-02
+     solid element        1873  failed at time  1.3005E-02
+     node  number        2343 deleted at time  1.3005E-02
+     solid element        1877  failed at time  1.3005E-02
+     node  number        2324 deleted at time  1.3005E-02
+     solid element        1881  failed at time  1.3005E-02
+     solid element        1889  failed at time  1.3005E-02
+     node  number        2344 deleted at time  1.3005E-02
+     solid element        1893  failed at time  1.3005E-02
+     node  number        2325 deleted at time  1.3005E-02
+     solid element        1897  failed at time  1.3005E-02
+     solid element        1905  failed at time  1.3005E-02
+     node  number        2345 deleted at time  1.3005E-02
+     solid element        1909  failed at time  1.3005E-02
+     node  number        2326 deleted at time  1.3005E-02
+     solid element        1913  failed at time  1.3005E-02
+     solid element        1921  failed at time  1.3005E-02
+     node  number        2346 deleted at time  1.3005E-02
+     solid element        1925  failed at time  1.3005E-02
+     node  number        2327 deleted at time  1.3005E-02
+     solid element        1929  failed at time  1.3005E-02
+     solid element        1937  failed at time  1.3005E-02
+     node  number        2347 deleted at time  1.3005E-02
+     solid element        1941  failed at time  1.3005E-02
+     node  number        2328 deleted at time  1.3005E-02
+     solid element        1945  failed at time  1.3005E-02
+     solid element        1953  failed at time  1.3005E-02
+     node  number        2348 deleted at time  1.3005E-02
+     solid element        1957  failed at time  1.3005E-02
+     node  number        2329 deleted at time  1.3005E-02
+     solid element        1961  failed at time  1.3005E-02
+     solid element        1969  failed at time  1.3005E-02
+     node  number        2349 deleted at time  1.3005E-02
+     node  number        2225 deleted at time  1.3005E-02
+     solid element        1973  failed at time  1.3005E-02
+     node  number        2330 deleted at time  1.3005E-02
+     node  number        2224 deleted at time  1.3005E-02
+     solid element        1977  failed at time  1.3005E-02
+     solid element        1999  failed at time  1.3005E-02
+     solid element        2000  failed at time  1.3005E-02
+     solid element        2015  failed at time  1.3005E-02
+     node  number        2350 deleted at time  1.3005E-02
+     node  number        2369 deleted at time  1.3005E-02
+     solid element        2016  failed at time  1.3005E-02
+     solid element        2031  failed at time  1.3005E-02
+     node  number        2351 deleted at time  1.3005E-02
+     node  number        2370 deleted at time  1.3005E-02
+     solid element        2032  failed at time  1.3005E-02
+     solid element        2047  failed at time  1.3005E-02
+     node  number        2352 deleted at time  1.3005E-02
+     node  number        2371 deleted at time  1.3005E-02
+     solid element        2048  failed at time  1.3005E-02
+     solid element        2063  failed at time  1.3005E-02
+     node  number        2353 deleted at time  1.3005E-02
+     node  number        2372 deleted at time  1.3005E-02
+     solid element        2064  failed at time  1.3005E-02
+     solid element        2079  failed at time  1.3005E-02
+     node  number        2354 deleted at time  1.3005E-02
+     node  number        2373 deleted at time  1.3005E-02
+     solid element        2080  failed at time  1.3005E-02
+     solid element        2095  failed at time  1.3005E-02
+     node  number        2355 deleted at time  1.3005E-02
+     node  number        2374 deleted at time  1.3005E-02
+     solid element        2096  failed at time  1.3005E-02
+     solid element        2111  failed at time  1.3005E-02
+     node  number        2356 deleted at time  1.3005E-02
+     node  number        2375 deleted at time  1.3005E-02
+     solid element        2112  failed at time  1.3005E-02
+     solid element        2127  failed at time  1.3005E-02
+     node  number        2357 deleted at time  1.3005E-02
+     node  number        2376 deleted at time  1.3005E-02
+     solid element        2128  failed at time  1.3005E-02
+     solid element        2143  failed at time  1.3005E-02
+     node  number        2358 deleted at time  1.3005E-02
+     node  number        2377 deleted at time  1.3005E-02
+     solid element        2144  failed at time  1.3005E-02
+     solid element        2159  failed at time  1.3005E-02
+     node  number        2359 deleted at time  1.3005E-02
+     node  number        2378 deleted at time  1.3005E-02
+     solid element        2160  failed at time  1.3005E-02
+     solid element        2175  failed at time  1.3005E-02
+     node  number        2360 deleted at time  1.3005E-02
+     node  number        2379 deleted at time  1.3005E-02
+     solid element        2176  failed at time  1.3005E-02
+     solid element        2191  failed at time  1.3005E-02
+     node  number        2361 deleted at time  1.3005E-02
+     node  number        2380 deleted at time  1.3005E-02
+     solid element        2192  failed at time  1.3005E-02
+     solid element        2207  failed at time  1.3005E-02
+     node  number        2362 deleted at time  1.3005E-02
+     node  number        2381 deleted at time  1.3005E-02
+     solid element        2208  failed at time  1.3005E-02
+     solid element        2223  failed at time  1.3005E-02
+     node  number        2363 deleted at time  1.3005E-02
+     node  number        2382 deleted at time  1.3005E-02
+     solid element        2224  failed at time  1.3005E-02
+     solid element        2239  failed at time  1.3005E-02
+     node  number        2364 deleted at time  1.3005E-02
+     node  number        2383 deleted at time  1.3005E-02
+     solid element        2240  failed at time  1.3005E-02
+     solid element        2255  failed at time  1.3005E-02
+     node  number        2365 deleted at time  1.3005E-02
+     node  number        2384 deleted at time  1.3005E-02
+     solid element        2256  failed at time  1.3005E-02
+     solid element        2271  failed at time  1.3005E-02
+     node  number        2366 deleted at time  1.3005E-02
+     node  number        2385 deleted at time  1.3005E-02
+     solid element        2272  failed at time  1.3005E-02
+     solid element        2287  failed at time  1.3005E-02
+     node  number        2367 deleted at time  1.3005E-02
+     node  number        2386 deleted at time  1.3005E-02
+     solid element        2288  failed at time  1.3005E-02
+     solid element        2303  failed at time  1.3005E-02
+     node  number        2368 deleted at time  1.3005E-02
+     node  number        2387 deleted at time  1.3005E-02
+     node  number        2226 deleted at time  1.3005E-02
+     node  number        2227 deleted at time  1.3005E-02
+     solid element        2304  failed at time  1.3005E-02
+     solid element        2625  failed at time  1.3005E-02
+     node  number        3272 deleted at time  1.3005E-02
+     solid element        2629  failed at time  1.3005E-02
+     node  number        3271 deleted at time  1.3005E-02
+     solid element        2633  failed at time  1.3005E-02
+     solid element        2641  failed at time  1.3005E-02
+     node  number        3335 deleted at time  1.3005E-02
+     solid element        2645  failed at time  1.3005E-02
+     node  number        3328 deleted at time  1.3005E-02
+     solid element        2649  failed at time  1.3005E-02
+     solid element        2657  failed at time  1.3005E-02
+     node  number        3336 deleted at time  1.3005E-02
+     solid element        2661  failed at time  1.3005E-02
+     node  number        3329 deleted at time  1.3005E-02
+     solid element        2665  failed at time  1.3005E-02
+     solid element        2673  failed at time  1.3005E-02
+     node  number        3337 deleted at time  1.3005E-02
+     solid element        2677  failed at time  1.3005E-02
+     node  number        3330 deleted at time  1.3005E-02
+     solid element        2681  failed at time  1.3005E-02
+     solid element        2689  failed at time  1.3005E-02
+     node  number        3338 deleted at time  1.3005E-02
+     solid element        2693  failed at time  1.3005E-02
+     node  number        3331 deleted at time  1.3005E-02
+     solid element        2697  failed at time  1.3005E-02
+     solid element        2705  failed at time  1.3005E-02
+     node  number        3339 deleted at time  1.3005E-02
+     solid element        2709  failed at time  1.3005E-02
+     node  number        3332 deleted at time  1.3005E-02
+     solid element        2713  failed at time  1.3005E-02
+     solid element        2721  failed at time  1.3005E-02
+     node  number        3340 deleted at time  1.3005E-02
+     solid element        2725  failed at time  1.3005E-02
+     node  number        3333 deleted at time  1.3005E-02
+     solid element        2729  failed at time  1.3005E-02
+     solid element        2737  failed at time  1.3005E-02
+     node  number        3341 deleted at time  1.3005E-02
+     node  number        2180 deleted at time  1.3005E-02
+     solid element        2741  failed at time  1.3005E-02
+     node  number        3334 deleted at time  1.3005E-02
+     node  number        2179 deleted at time  1.3005E-02
+     solid element        2745  failed at time  1.3005E-02
+     solid element        2767  failed at time  1.3005E-02
+     node  number        3273 deleted at time  1.3005E-02
+     node  number        3274 deleted at time  1.3005E-02
+     solid element        2768  failed at time  1.3005E-02
+     solid element        2783  failed at time  1.3005E-02
+     node  number        3342 deleted at time  1.3005E-02
+     node  number        3349 deleted at time  1.3005E-02
+     solid element        2784  failed at time  1.3005E-02
+     solid element        2799  failed at time  1.3005E-02
+     node  number        3343 deleted at time  1.3005E-02
+     node  number        3350 deleted at time  1.3005E-02
+     solid element        2800  failed at time  1.3005E-02
+     solid element        2815  failed at time  1.3005E-02
+     node  number        3344 deleted at time  1.3005E-02
+     node  number        3351 deleted at time  1.3005E-02
+     solid element        2816  failed at time  1.3005E-02
+     solid element        2831  failed at time  1.3005E-02
+     node  number        3345 deleted at time  1.3005E-02
+     node  number        3352 deleted at time  1.3005E-02
+     solid element        2832  failed at time  1.3005E-02
+     solid element        2847  failed at time  1.3005E-02
+     node  number        3346 deleted at time  1.3005E-02
+     node  number        3353 deleted at time  1.3005E-02
+     solid element        2848  failed at time  1.3005E-02
+     solid element        2863  failed at time  1.3005E-02
+     node  number        3347 deleted at time  1.3005E-02
+     node  number        3354 deleted at time  1.3005E-02
+     solid element        2864  failed at time  1.3005E-02
+     solid element        2879  failed at time  1.3005E-02
+     node  number        3348 deleted at time  1.3005E-02
+     node  number        3355 deleted at time  1.3005E-02
+     node  number        2181 deleted at time  1.3005E-02
+     node  number        2182 deleted at time  1.3005E-02
+     solid element        2880  failed at time  1.3005E-02
+     solid element        8889  failed at time  1.3005E-02
+     node  number        7142 deleted at time  1.3005E-02
+     solid element        8890  failed at time  1.3005E-02
+     node  number        7141 deleted at time  1.3005E-02
+     solid element        8891  failed at time  1.3005E-02
+     node  number        7140 deleted at time  1.3005E-02
+     solid element        8892  failed at time  1.3005E-02
+     node  number        7139 deleted at time  1.3005E-02
+     solid element        8893  failed at time  1.3005E-02
+     node  number        7138 deleted at time  1.3005E-02
+     solid element        8894  failed at time  1.3005E-02
+     node  number        7137 deleted at time  1.3005E-02
+     solid element        8895  failed at time  1.3005E-02
+     node  number        7136 deleted at time  1.3005E-02
+     solid element        8896  failed at time  1.3005E-02
+     node  number        7135 deleted at time  1.3005E-02
+     solid element        8897  failed at time  1.3005E-02
+     node  number        7134 deleted at time  1.3005E-02
+     solid element        8898  failed at time  1.3005E-02
+     node  number        7133 deleted at time  1.3005E-02
+     solid element        8899  failed at time  1.3005E-02
+     node  number        7132 deleted at time  1.3005E-02
+     solid element        8900  failed at time  1.3005E-02
+     node  number        7131 deleted at time  1.3005E-02
+     solid element        8901  failed at time  1.3005E-02
+     node  number        7130 deleted at time  1.3005E-02
+     solid element        8902  failed at time  1.3005E-02
+     node  number        7129 deleted at time  1.3005E-02
+     solid element        8903  failed at time  1.3005E-02
+     node  number        7128 deleted at time  1.3005E-02
+     solid element        8904  failed at time  1.3005E-02
+     node  number        7127 deleted at time  1.3005E-02
+     solid element        8905  failed at time  1.3005E-02
+     node  number        7126 deleted at time  1.3005E-02
+     solid element        8906  failed at time  1.3005E-02
+     node  number        7125 deleted at time  1.3005E-02
+     solid element        8907  failed at time  1.3005E-02
+     node  number        7124 deleted at time  1.3005E-02
+     solid element        8908  failed at time  1.3005E-02
+     node  number        7123 deleted at time  1.3005E-02
+     solid element        8909  failed at time  1.3005E-02
+     node  number        7122 deleted at time  1.3005E-02
+     solid element        8910  failed at time  1.3005E-02
+     node  number        7121 deleted at time  1.3005E-02
+     solid element        8911  failed at time  1.3005E-02
+     node  number        7120 deleted at time  1.3005E-02
+     solid element        8912  failed at time  1.3005E-02
+     node  number        7119 deleted at time  1.3005E-02
+     solid element        8913  failed at time  1.3005E-02
+     node  number        7118 deleted at time  1.3005E-02
+     solid element        8914  failed at time  1.3005E-02
+     node  number        7117 deleted at time  1.3005E-02
+     solid element        8915  failed at time  1.3005E-02
+     node  number        7116 deleted at time  1.3005E-02
+     solid element        8916  failed at time  1.3005E-02
+     node  number        7115 deleted at time  1.3005E-02
+     solid element        8917  failed at time  1.3005E-02
+     node  number        7114 deleted at time  1.3005E-02
+     node  number        7113 deleted at time  1.3005E-02
+     solid element        8918  failed at time  1.3005E-02
+     solid element        8919  failed at time  1.3005E-02
+     node  number        7232 deleted at time  1.3005E-02
+     solid element        8920  failed at time  1.3005E-02
+     node  number        7229 deleted at time  1.3005E-02
+     solid element        8921  failed at time  1.3005E-02
+     node  number        7226 deleted at time  1.3005E-02
+     solid element        8922  failed at time  1.3005E-02
+     node  number        7223 deleted at time  1.3005E-02
+     solid element        8923  failed at time  1.3005E-02
+     node  number        7220 deleted at time  1.3005E-02
+     solid element        8924  failed at time  1.3005E-02
+     node  number        7217 deleted at time  1.3005E-02
+     solid element        8925  failed at time  1.3005E-02
+     node  number        7214 deleted at time  1.3005E-02
+     solid element        8926  failed at time  1.3005E-02
+     node  number        7211 deleted at time  1.3005E-02
+     solid element        8927  failed at time  1.3005E-02
+     node  number        7208 deleted at time  1.3005E-02
+     solid element        8928  failed at time  1.3005E-02
+     node  number        7205 deleted at time  1.3005E-02
+     solid element        8929  failed at time  1.3005E-02
+     node  number        7202 deleted at time  1.3005E-02
+     solid element        8930  failed at time  1.3005E-02
+     node  number        7199 deleted at time  1.3005E-02
+     solid element        8931  failed at time  1.3005E-02
+     node  number        7196 deleted at time  1.3005E-02
+     solid element        8932  failed at time  1.3005E-02
+     node  number        7193 deleted at time  1.3005E-02
+     solid element        8933  failed at time  1.3005E-02
+     node  number        7190 deleted at time  1.3005E-02
+     solid element        8934  failed at time  1.3005E-02
+     node  number        7187 deleted at time  1.3005E-02
+     solid element        8935  failed at time  1.3005E-02
+     node  number        7184 deleted at time  1.3005E-02
+     solid element        8936  failed at time  1.3005E-02
+     node  number        7181 deleted at time  1.3005E-02
+     solid element        8937  failed at time  1.3005E-02
+     node  number        7178 deleted at time  1.3005E-02
+     solid element        8938  failed at time  1.3005E-02
+     node  number        7175 deleted at time  1.3005E-02
+     solid element        8939  failed at time  1.3005E-02
+     node  number        7172 deleted at time  1.3005E-02
+     solid element        8940  failed at time  1.3005E-02
+     node  number        7169 deleted at time  1.3005E-02
+     solid element        8941  failed at time  1.3005E-02
+     node  number        7166 deleted at time  1.3005E-02
+     solid element        8942  failed at time  1.3005E-02
+     node  number        7163 deleted at time  1.3005E-02
+     solid element        8943  failed at time  1.3005E-02
+     node  number        7160 deleted at time  1.3005E-02
+     solid element        8944  failed at time  1.3005E-02
+     node  number        7157 deleted at time  1.3005E-02
+     solid element        8945  failed at time  1.3005E-02
+     node  number        7154 deleted at time  1.3005E-02
+     solid element        8946  failed at time  1.3005E-02
+     node  number        7151 deleted at time  1.3005E-02
+     solid element        8947  failed at time  1.3005E-02
+     node  number        7148 deleted at time  1.3005E-02
+     node  number        7143 deleted at time  1.3005E-02
+     solid element        8948  failed at time  1.3005E-02
+     solid element        8949  failed at time  1.3005E-02
+     node  number        7231 deleted at time  1.3005E-02
+     solid element        8950  failed at time  1.3005E-02
+     node  number        7228 deleted at time  1.3005E-02
+     solid element        8951  failed at time  1.3005E-02
+     node  number        7225 deleted at time  1.3005E-02
+     solid element        8952  failed at time  1.3005E-02
+     node  number        7222 deleted at time  1.3005E-02
+     solid element        8953  failed at time  1.3005E-02
+     node  number        7219 deleted at time  1.3005E-02
+     solid element        8954  failed at time  1.3005E-02
+     node  number        7216 deleted at time  1.3005E-02
+     solid element        8955  failed at time  1.3005E-02
+     node  number        7213 deleted at time  1.3005E-02
+     solid element        8956  failed at time  1.3005E-02
+     node  number        7210 deleted at time  1.3005E-02
+     solid element        8957  failed at time  1.3005E-02
+     node  number        7207 deleted at time  1.3005E-02
+     solid element        8958  failed at time  1.3005E-02
+     node  number        7204 deleted at time  1.3005E-02
+     solid element        8959  failed at time  1.3005E-02
+     node  number        7201 deleted at time  1.3005E-02
+     solid element        8960  failed at time  1.3005E-02
+     node  number        7198 deleted at time  1.3005E-02
+     solid element        8961  failed at time  1.3005E-02
+     node  number        7195 deleted at time  1.3005E-02
+     solid element        8962  failed at time  1.3005E-02
+     node  number        7192 deleted at time  1.3005E-02
+     solid element        8963  failed at time  1.3005E-02
+     node  number        7189 deleted at time  1.3005E-02
+     solid element        8964  failed at time  1.3005E-02
+     node  number        7186 deleted at time  1.3005E-02
+     solid element        8965  failed at time  1.3005E-02
+     node  number        7183 deleted at time  1.3005E-02
+     solid element        8966  failed at time  1.3005E-02
+     node  number        7180 deleted at time  1.3005E-02
+     solid element        8967  failed at time  1.3005E-02
+     node  number        7177 deleted at time  1.3005E-02
+     solid element        8968  failed at time  1.3005E-02
+     node  number        7174 deleted at time  1.3005E-02
+     solid element        8969  failed at time  1.3005E-02
+     node  number        7171 deleted at time  1.3005E-02
+     solid element        8970  failed at time  1.3005E-02
+     node  number        7168 deleted at time  1.3005E-02
+     solid element        8971  failed at time  1.3005E-02
+     node  number        7165 deleted at time  1.3005E-02
+     solid element        8972  failed at time  1.3005E-02
+     node  number        7162 deleted at time  1.3005E-02
+     solid element        8973  failed at time  1.3005E-02
+     node  number        7159 deleted at time  1.3005E-02
+     solid element        8974  failed at time  1.3005E-02
+     node  number        7156 deleted at time  1.3005E-02
+     solid element        8975  failed at time  1.3005E-02
+     node  number        7153 deleted at time  1.3005E-02
+     solid element        8976  failed at time  1.3005E-02
+     node  number        7150 deleted at time  1.3005E-02
+     solid element        8977  failed at time  1.3005E-02
+     node  number        7147 deleted at time  1.3005E-02
+     node  number        7144 deleted at time  1.3005E-02
+     solid element        8978  failed at time  1.3005E-02
+     solid element        8979  failed at time  1.3005E-02
+     node  number        7230 deleted at time  1.3005E-02
+     node  number        7112 deleted at time  1.3005E-02
+     solid element        8980  failed at time  1.3005E-02
+     node  number        7227 deleted at time  1.3005E-02
+     node  number        7111 deleted at time  1.3005E-02
+     solid element        8981  failed at time  1.3005E-02
+     node  number        7224 deleted at time  1.3005E-02
+     node  number        7110 deleted at time  1.3005E-02
+     solid element        8982  failed at time  1.3005E-02
+     node  number        7221 deleted at time  1.3005E-02
+     node  number        7109 deleted at time  1.3005E-02
+     solid element        8983  failed at time  1.3005E-02
+     node  number        7218 deleted at time  1.3005E-02
+     node  number        7108 deleted at time  1.3005E-02
+     solid element        8984  failed at time  1.3005E-02
+     node  number        7215 deleted at time  1.3005E-02
+     node  number        7107 deleted at time  1.3005E-02
+     solid element        8985  failed at time  1.3005E-02
+     node  number        7212 deleted at time  1.3005E-02
+     node  number        7106 deleted at time  1.3005E-02
+     solid element        8986  failed at time  1.3005E-02
+     node  number        7209 deleted at time  1.3005E-02
+     node  number        7105 deleted at time  1.3005E-02
+     solid element        8987  failed at time  1.3005E-02
+     node  number        7206 deleted at time  1.3005E-02
+     node  number        7104 deleted at time  1.3005E-02
+     solid element        8988  failed at time  1.3005E-02
+     node  number        7203 deleted at time  1.3005E-02
+     node  number        7103 deleted at time  1.3005E-02
+     solid element        8989  failed at time  1.3005E-02
+     node  number        7200 deleted at time  1.3005E-02
+     node  number        7102 deleted at time  1.3005E-02
+     solid element        8990  failed at time  1.3005E-02
+     node  number        7197 deleted at time  1.3005E-02
+     node  number        7101 deleted at time  1.3005E-02
+     solid element        8991  failed at time  1.3005E-02
+     node  number        7194 deleted at time  1.3005E-02
+     node  number        7100 deleted at time  1.3005E-02
+     solid element        8992  failed at time  1.3005E-02
+     node  number        7191 deleted at time  1.3005E-02
+     node  number        7099 deleted at time  1.3005E-02
+     solid element        8993  failed at time  1.3005E-02
+     node  number        7188 deleted at time  1.3005E-02
+     node  number        7098 deleted at time  1.3005E-02
+     solid element        8994  failed at time  1.3005E-02
+     node  number        7185 deleted at time  1.3005E-02
+     node  number        7097 deleted at time  1.3005E-02
+     solid element        8995  failed at time  1.3005E-02
+     node  number        7182 deleted at time  1.3005E-02
+     node  number        7096 deleted at time  1.3005E-02
+     solid element        8996  failed at time  1.3005E-02
+     node  number        7179 deleted at time  1.3005E-02
+     node  number        7095 deleted at time  1.3005E-02
+     solid element        8997  failed at time  1.3005E-02
+     node  number        7176 deleted at time  1.3005E-02
+     node  number        7094 deleted at time  1.3005E-02
+     solid element        8998  failed at time  1.3005E-02
+     node  number        7173 deleted at time  1.3005E-02
+     node  number        7093 deleted at time  1.3005E-02
+     solid element        8999  failed at time  1.3005E-02
+     node  number        7170 deleted at time  1.3005E-02
+     node  number        7092 deleted at time  1.3005E-02
+     solid element        9000  failed at time  1.3005E-02
+     node  number        7167 deleted at time  1.3005E-02
+     node  number        7091 deleted at time  1.3005E-02
+     solid element        9001  failed at time  1.3005E-02
+     node  number        7164 deleted at time  1.3005E-02
+     node  number        7090 deleted at time  1.3005E-02
+     solid element        9002  failed at time  1.3005E-02
+     node  number        7161 deleted at time  1.3005E-02
+     node  number        7089 deleted at time  1.3005E-02
+     solid element        9003  failed at time  1.3005E-02
+     node  number        7158 deleted at time  1.3005E-02
+     node  number        7088 deleted at time  1.3005E-02
+     solid element        9004  failed at time  1.3005E-02
+     node  number        7155 deleted at time  1.3005E-02
+     node  number        7087 deleted at time  1.3005E-02
+     solid element        9005  failed at time  1.3005E-02
+     node  number        7152 deleted at time  1.3005E-02
+     node  number        7086 deleted at time  1.3005E-02
+     solid element        9006  failed at time  1.3005E-02
+     node  number        7149 deleted at time  1.3005E-02
+     node  number        7085 deleted at time  1.3005E-02
+     solid element        9007  failed at time  1.3005E-02
+     node  number        7146 deleted at time  1.3005E-02
+     node  number        7145 deleted at time  1.3005E-02
+     node  number        7083 deleted at time  1.3005E-02
+     node  number        7084 deleted at time  1.3005E-02
+     solid element        9008  failed at time  1.3005E-02
+     node  number        6934 deleted at time  1.3005E-02
+     solid element       10609  failed at time  1.3005E-02
+     node  number        6937 deleted at time  1.3005E-02
+     solid element       10610  failed at time  1.3005E-02
+     node  number        6936 deleted at time  1.3005E-02
+     solid element       10611  failed at time  1.3005E-02
+     node  number        6935 deleted at time  1.3005E-02
+     node  number        6933 deleted at time  1.3005E-02
+     solid element       10612  failed at time  1.3005E-02
+     node  number       13702 deleted at time  1.3005E-02
+     solid element       10729  failed at time  1.3005E-02
+     node  number       14888 deleted at time  1.3005E-02
+     solid element       10730  failed at time  1.3005E-02
+     node  number       14887 deleted at time  1.3005E-02
+     solid element       10731  failed at time  1.3005E-02
+     node  number       14886 deleted at time  1.3005E-02
+     node  number       14331 deleted at time  1.3005E-02
+     solid element       10732  failed at time  1.3005E-02
+     node  number       13701 deleted at time  1.3005E-02
+     solid element       10849  failed at time  1.3005E-02
+     node  number       14891 deleted at time  1.3005E-02
+     solid element       10850  failed at time  1.3005E-02
+     node  number       14890 deleted at time  1.3005E-02
+     solid element       10851  failed at time  1.3005E-02
+     node  number       14889 deleted at time  1.3005E-02
+     node  number       14330 deleted at time  1.3005E-02
+     solid element       10852  failed at time  1.3005E-02
+     node  number       13700 deleted at time  1.3005E-02
+     solid element       10969  failed at time  1.3005E-02
+     node  number       14894 deleted at time  1.3005E-02
+     solid element       10970  failed at time  1.3005E-02
+     node  number       14893 deleted at time  1.3005E-02
+     solid element       10971  failed at time  1.3005E-02
+     node  number       14892 deleted at time  1.3005E-02
+     node  number       14329 deleted at time  1.3005E-02
+     solid element       10972  failed at time  1.3005E-02
+     node  number       13699 deleted at time  1.3005E-02
+     solid element       11089  failed at time  1.3005E-02
+     node  number       14897 deleted at time  1.3005E-02
+     solid element       11090  failed at time  1.3005E-02
+     node  number       14896 deleted at time  1.3005E-02
+     solid element       11091  failed at time  1.3005E-02
+     node  number       14895 deleted at time  1.3005E-02
+     node  number       14328 deleted at time  1.3005E-02
+     solid element       11092  failed at time  1.3005E-02
+     node  number       13698 deleted at time  1.3005E-02
+     solid element       11209  failed at time  1.3005E-02
+     node  number       14900 deleted at time  1.3005E-02
+     solid element       11210  failed at time  1.3005E-02
+     node  number       14899 deleted at time  1.3005E-02
+     solid element       11211  failed at time  1.3005E-02
+     node  number       14898 deleted at time  1.3005E-02
+     node  number       14327 deleted at time  1.3005E-02
+     solid element       11212  failed at time  1.3005E-02
+     node  number       13697 deleted at time  1.3005E-02
+     solid element       11329  failed at time  1.3005E-02
+     node  number       14903 deleted at time  1.3005E-02
+     solid element       11330  failed at time  1.3005E-02
+     node  number       14902 deleted at time  1.3005E-02
+     solid element       11331  failed at time  1.3005E-02
+     node  number       14901 deleted at time  1.3005E-02
+     node  number       14326 deleted at time  1.3005E-02
+     solid element       11332  failed at time  1.3005E-02
+     node  number       13696 deleted at time  1.3005E-02
+     solid element       11449  failed at time  1.3005E-02
+     node  number       14906 deleted at time  1.3005E-02
+     solid element       11450  failed at time  1.3005E-02
+     node  number       14905 deleted at time  1.3005E-02
+     solid element       11451  failed at time  1.3005E-02
+     node  number       14904 deleted at time  1.3005E-02
+     node  number       14325 deleted at time  1.3005E-02
+     solid element       11452  failed at time  1.3005E-02
+     node  number       13695 deleted at time  1.3005E-02
+     solid element       11569  failed at time  1.3005E-02
+     node  number       14909 deleted at time  1.3005E-02
+     solid element       11570  failed at time  1.3005E-02
+     node  number       14908 deleted at time  1.3005E-02
+     solid element       11571  failed at time  1.3005E-02
+     node  number       14907 deleted at time  1.3005E-02
+     node  number       14324 deleted at time  1.3005E-02
+     solid element       11572  failed at time  1.3005E-02
+     node  number       13694 deleted at time  1.3005E-02
+     solid element       11689  failed at time  1.3005E-02
+     node  number       14912 deleted at time  1.3005E-02
+     solid element       11690  failed at time  1.3005E-02
+     node  number       14911 deleted at time  1.3005E-02
+     solid element       11691  failed at time  1.3005E-02
+     node  number       14910 deleted at time  1.3005E-02
+     node  number       14323 deleted at time  1.3005E-02
+     solid element       11692  failed at time  1.3005E-02
+     node  number       13693 deleted at time  1.3005E-02
+     solid element       11809  failed at time  1.3005E-02
+     node  number       14915 deleted at time  1.3005E-02
+     solid element       11810  failed at time  1.3005E-02
+     node  number       14914 deleted at time  1.3005E-02
+     solid element       11811  failed at time  1.3005E-02
+     node  number       14913 deleted at time  1.3005E-02
+     node  number       14322 deleted at time  1.3005E-02
+     solid element       11812  failed at time  1.3005E-02
+     node  number       13692 deleted at time  1.3005E-02
+     solid element       11929  failed at time  1.3005E-02
+     node  number       14918 deleted at time  1.3005E-02
+     solid element       11930  failed at time  1.3005E-02
+     node  number       14917 deleted at time  1.3005E-02
+     solid element       11931  failed at time  1.3005E-02
+     node  number       14916 deleted at time  1.3005E-02
+     node  number       14321 deleted at time  1.3005E-02
+     solid element       11932  failed at time  1.3005E-02
+     node  number       13691 deleted at time  1.3005E-02
+     solid element       12049  failed at time  1.3005E-02
+     node  number       14921 deleted at time  1.3005E-02
+     solid element       12050  failed at time  1.3005E-02
+     node  number       14920 deleted at time  1.3005E-02
+     solid element       12051  failed at time  1.3005E-02
+     node  number       14919 deleted at time  1.3005E-02
+     node  number       14320 deleted at time  1.3005E-02
+     solid element       12052  failed at time  1.3005E-02
+     node  number       13690 deleted at time  1.3005E-02
+     solid element       12169  failed at time  1.3005E-02
+     node  number       14924 deleted at time  1.3005E-02
+     solid element       12170  failed at time  1.3005E-02
+     node  number       14923 deleted at time  1.3005E-02
+     solid element       12171  failed at time  1.3005E-02
+     node  number       14922 deleted at time  1.3005E-02
+     node  number       14319 deleted at time  1.3005E-02
+     solid element       12172  failed at time  1.3005E-02
+     node  number       13689 deleted at time  1.3005E-02
+     solid element       12289  failed at time  1.3005E-02
+     node  number       14927 deleted at time  1.3005E-02
+     solid element       12290  failed at time  1.3005E-02
+     node  number       14926 deleted at time  1.3005E-02
+     solid element       12291  failed at time  1.3005E-02
+     node  number       14925 deleted at time  1.3005E-02
+     node  number       14318 deleted at time  1.3005E-02
+     solid element       12292  failed at time  1.3005E-02
+     node  number       13688 deleted at time  1.3005E-02
+     solid element       12409  failed at time  1.3005E-02
+     node  number       14930 deleted at time  1.3005E-02
+     solid element       12410  failed at time  1.3005E-02
+     node  number       14929 deleted at time  1.3005E-02
+     solid element       12411  failed at time  1.3005E-02
+     node  number       14928 deleted at time  1.3005E-02
+     node  number       14317 deleted at time  1.3005E-02
+     solid element       12412  failed at time  1.3005E-02
+     node  number       13687 deleted at time  1.3005E-02
+     solid element       12529  failed at time  1.3005E-02
+     node  number       14933 deleted at time  1.3005E-02
+     solid element       12530  failed at time  1.3005E-02
+     node  number       14932 deleted at time  1.3005E-02
+     solid element       12531  failed at time  1.3005E-02
+     node  number       14931 deleted at time  1.3005E-02
+     node  number       14316 deleted at time  1.3005E-02
+     solid element       12532  failed at time  1.3005E-02
+     node  number       13686 deleted at time  1.3005E-02
+     solid element       12649  failed at time  1.3005E-02
+     node  number       14936 deleted at time  1.3005E-02
+     solid element       12650  failed at time  1.3005E-02
+     node  number       14935 deleted at time  1.3005E-02
+     solid element       12651  failed at time  1.3005E-02
+     node  number       14934 deleted at time  1.3005E-02
+     node  number       14315 deleted at time  1.3005E-02
+     solid element       12652  failed at time  1.3005E-02
+     node  number       13685 deleted at time  1.3005E-02
+     solid element       12769  failed at time  1.3005E-02
+     node  number       14939 deleted at time  1.3005E-02
+     solid element       12770  failed at time  1.3005E-02
+     node  number       14938 deleted at time  1.3005E-02
+     solid element       12771  failed at time  1.3005E-02
+     node  number       14937 deleted at time  1.3005E-02
+     node  number       14314 deleted at time  1.3005E-02
+     solid element       12772  failed at time  1.3005E-02
+     node  number       13684 deleted at time  1.3005E-02
+     node  number       13683 deleted at time  1.3005E-02
+     solid element       12889  failed at time  1.3005E-02
+     node  number       14942 deleted at time  1.3005E-02
+     node  number       14885 deleted at time  1.3005E-02
+     solid element       12890  failed at time  1.3005E-02
+     node  number       14941 deleted at time  1.3005E-02
+     node  number       14884 deleted at time  1.3005E-02
+     solid element       12891  failed at time  1.3005E-02
+     node  number       14940 deleted at time  1.3005E-02
+     node  number       14313 deleted at time  1.3005E-02
+     node  number       14883 deleted at time  1.3005E-02
+     node  number       14283 deleted at time  1.3005E-02
+     solid element       12892  failed at time  1.3005E-02
+     solid element       18889  failed at time  1.3005E-02
+     node  number       20147 deleted at time  1.3005E-02
+     solid element       18890  failed at time  1.3005E-02
+     node  number       20146 deleted at time  1.3005E-02
+     solid element       18891  failed at time  1.3005E-02
+     node  number       20145 deleted at time  1.3005E-02
+     solid element       18892  failed at time  1.3005E-02
+     node  number       20144 deleted at time  1.3005E-02
+     solid element       18893  failed at time  1.3005E-02
+     node  number       20143 deleted at time  1.3005E-02
+     solid element       18894  failed at time  1.3005E-02
+     node  number       20142 deleted at time  1.3005E-02
+     solid element       18895  failed at time  1.3005E-02
+     node  number       20141 deleted at time  1.3005E-02
+     solid element       18896  failed at time  1.3005E-02
+     node  number       20140 deleted at time  1.3005E-02
+     solid element       18897  failed at time  1.3005E-02
+     node  number       20139 deleted at time  1.3005E-02
+     solid element       18898  failed at time  1.3005E-02
+     node  number       20138 deleted at time  1.3005E-02
+     solid element       18899  failed at time  1.3005E-02
+     node  number       20137 deleted at time  1.3005E-02
+     solid element       18900  failed at time  1.3005E-02
+     node  number       20136 deleted at time  1.3005E-02
+     solid element       18901  failed at time  1.3005E-02
+     node  number       20135 deleted at time  1.3005E-02
+     solid element       18902  failed at time  1.3005E-02
+     node  number       20134 deleted at time  1.3005E-02
+     solid element       18903  failed at time  1.3005E-02
+     node  number       20133 deleted at time  1.3005E-02
+     solid element       18904  failed at time  1.3005E-02
+     node  number       20132 deleted at time  1.3005E-02
+     solid element       18905  failed at time  1.3005E-02
+     node  number       20131 deleted at time  1.3005E-02
+     solid element       18906  failed at time  1.3005E-02
+     node  number       20130 deleted at time  1.3005E-02
+     solid element       18907  failed at time  1.3005E-02
+     node  number       20129 deleted at time  1.3005E-02
+     solid element       18908  failed at time  1.3005E-02
+     node  number       20128 deleted at time  1.3005E-02
+     solid element       18909  failed at time  1.3005E-02
+     node  number       20127 deleted at time  1.3005E-02
+     solid element       18910  failed at time  1.3005E-02
+     node  number       20126 deleted at time  1.3005E-02
+     solid element       18911  failed at time  1.3005E-02
+     node  number       20125 deleted at time  1.3005E-02
+     solid element       18912  failed at time  1.3005E-02
+     node  number       20124 deleted at time  1.3005E-02
+     solid element       18913  failed at time  1.3005E-02
+     node  number       20123 deleted at time  1.3005E-02
+     solid element       18914  failed at time  1.3005E-02
+     node  number       20122 deleted at time  1.3005E-02
+     solid element       18915  failed at time  1.3005E-02
+     node  number       20121 deleted at time  1.3005E-02
+     solid element       18916  failed at time  1.3005E-02
+     node  number       20120 deleted at time  1.3005E-02
+     solid element       18917  failed at time  1.3005E-02
+     node  number       20119 deleted at time  1.3005E-02
+     node  number       20118 deleted at time  1.3005E-02
+     solid element       18918  failed at time  1.3005E-02
+     solid element       18919  failed at time  1.3005E-02
+     node  number       20237 deleted at time  1.3005E-02
+     solid element       18920  failed at time  1.3005E-02
+     node  number       20234 deleted at time  1.3005E-02
+     solid element       18921  failed at time  1.3005E-02
+     node  number       20231 deleted at time  1.3005E-02
+     solid element       18922  failed at time  1.3005E-02
+     node  number       20228 deleted at time  1.3005E-02
+     solid element       18923  failed at time  1.3005E-02
+     node  number       20225 deleted at time  1.3005E-02
+     solid element       18924  failed at time  1.3005E-02
+     node  number       20222 deleted at time  1.3005E-02
+     solid element       18925  failed at time  1.3005E-02
+     node  number       20219 deleted at time  1.3005E-02
+     solid element       18926  failed at time  1.3005E-02
+     node  number       20216 deleted at time  1.3005E-02
+     solid element       18927  failed at time  1.3005E-02
+     node  number       20213 deleted at time  1.3005E-02
+     solid element       18928  failed at time  1.3005E-02
+     node  number       20210 deleted at time  1.3005E-02
+     solid element       18929  failed at time  1.3005E-02
+     node  number       20207 deleted at time  1.3005E-02
+     solid element       18930  failed at time  1.3005E-02
+     node  number       20204 deleted at time  1.3005E-02
+     solid element       18931  failed at time  1.3005E-02
+     node  number       20201 deleted at time  1.3005E-02
+     solid element       18932  failed at time  1.3005E-02
+     node  number       20198 deleted at time  1.3005E-02
+     solid element       18933  failed at time  1.3005E-02
+     node  number       20195 deleted at time  1.3005E-02
+     solid element       18934  failed at time  1.3005E-02
+     node  number       20192 deleted at time  1.3005E-02
+     solid element       18935  failed at time  1.3005E-02
+     node  number       20189 deleted at time  1.3005E-02
+     solid element       18936  failed at time  1.3005E-02
+     node  number       20186 deleted at time  1.3005E-02
+     solid element       18937  failed at time  1.3005E-02
+     node  number       20183 deleted at time  1.3005E-02
+     solid element       18938  failed at time  1.3005E-02
+     node  number       20180 deleted at time  1.3005E-02
+     solid element       18939  failed at time  1.3005E-02
+     node  number       20177 deleted at time  1.3005E-02
+     solid element       18940  failed at time  1.3005E-02
+     node  number       20174 deleted at time  1.3005E-02
+     solid element       18941  failed at time  1.3005E-02
+     node  number       20171 deleted at time  1.3005E-02
+     solid element       18942  failed at time  1.3005E-02
+     node  number       20168 deleted at time  1.3005E-02
+     solid element       18943  failed at time  1.3005E-02
+     node  number       20165 deleted at time  1.3005E-02
+     solid element       18944  failed at time  1.3005E-02
+     node  number       20162 deleted at time  1.3005E-02
+     solid element       18945  failed at time  1.3005E-02
+     node  number       20159 deleted at time  1.3005E-02
+     solid element       18946  failed at time  1.3005E-02
+     node  number       20156 deleted at time  1.3005E-02
+     solid element       18947  failed at time  1.3005E-02
+     node  number       20153 deleted at time  1.3005E-02
+     node  number       20148 deleted at time  1.3005E-02
+     solid element       18948  failed at time  1.3005E-02
+     solid element       18949  failed at time  1.3005E-02
+     node  number       20236 deleted at time  1.3005E-02
+     solid element       18950  failed at time  1.3005E-02
+     node  number       20233 deleted at time  1.3005E-02
+     solid element       18951  failed at time  1.3005E-02
+     node  number       20230 deleted at time  1.3005E-02
+     solid element       18952  failed at time  1.3005E-02
+     node  number       20227 deleted at time  1.3005E-02
+     solid element       18953  failed at time  1.3005E-02
+     node  number       20224 deleted at time  1.3005E-02
+     solid element       18954  failed at time  1.3005E-02
+     node  number       20221 deleted at time  1.3005E-02
+     solid element       18955  failed at time  1.3005E-02
+     node  number       20218 deleted at time  1.3005E-02
+     solid element       18956  failed at time  1.3005E-02
+     node  number       20215 deleted at time  1.3005E-02
+     solid element       18957  failed at time  1.3005E-02
+     node  number       20212 deleted at time  1.3005E-02
+     solid element       18958  failed at time  1.3005E-02
+     node  number       20209 deleted at time  1.3005E-02
+     solid element       18959  failed at time  1.3005E-02
+     node  number       20206 deleted at time  1.3005E-02
+     solid element       18960  failed at time  1.3005E-02
+     node  number       20203 deleted at time  1.3005E-02
+     solid element       18961  failed at time  1.3005E-02
+     node  number       20200 deleted at time  1.3005E-02
+     solid element       18962  failed at time  1.3005E-02
+     node  number       20197 deleted at time  1.3005E-02
+     solid element       18963  failed at time  1.3005E-02
+     node  number       20194 deleted at time  1.3005E-02
+     solid element       18964  failed at time  1.3005E-02
+     node  number       20191 deleted at time  1.3005E-02
+     solid element       18965  failed at time  1.3005E-02
+     node  number       20188 deleted at time  1.3005E-02
+     solid element       18966  failed at time  1.3005E-02
+     node  number       20185 deleted at time  1.3005E-02
+     solid element       18967  failed at time  1.3005E-02
+     node  number       20182 deleted at time  1.3005E-02
+     solid element       18968  failed at time  1.3005E-02
+     node  number       20179 deleted at time  1.3005E-02
+     solid element       18969  failed at time  1.3005E-02
+     node  number       20176 deleted at time  1.3005E-02
+     solid element       18970  failed at time  1.3005E-02
+     node  number       20173 deleted at time  1.3005E-02
+     solid element       18971  failed at time  1.3005E-02
+     node  number       20170 deleted at time  1.3005E-02
+     solid element       18972  failed at time  1.3005E-02
+     node  number       20167 deleted at time  1.3005E-02
+     solid element       18973  failed at time  1.3005E-02
+     node  number       20164 deleted at time  1.3005E-02
+     solid element       18974  failed at time  1.3005E-02
+     node  number       20161 deleted at time  1.3005E-02
+     solid element       18975  failed at time  1.3005E-02
+     node  number       20158 deleted at time  1.3005E-02
+     solid element       18976  failed at time  1.3005E-02
+     node  number       20155 deleted at time  1.3005E-02
+     solid element       18977  failed at time  1.3005E-02
+     node  number       20152 deleted at time  1.3005E-02
+     node  number       20149 deleted at time  1.3005E-02
+     solid element       18978  failed at time  1.3005E-02
+     solid element       18979  failed at time  1.3005E-02
+     node  number       20235 deleted at time  1.3005E-02
+     node  number       20117 deleted at time  1.3005E-02
+     solid element       18980  failed at time  1.3005E-02
+     node  number       20232 deleted at time  1.3005E-02
+     node  number       20116 deleted at time  1.3005E-02
+     solid element       18981  failed at time  1.3005E-02
+     node  number       20229 deleted at time  1.3005E-02
+     node  number       20115 deleted at time  1.3005E-02
+     solid element       18982  failed at time  1.3005E-02
+     node  number       20226 deleted at time  1.3005E-02
+     node  number       20114 deleted at time  1.3005E-02
+     solid element       18983  failed at time  1.3005E-02
+     node  number       20223 deleted at time  1.3005E-02
+     node  number       20113 deleted at time  1.3005E-02
+     solid element       18984  failed at time  1.3005E-02
+     node  number       20220 deleted at time  1.3005E-02
+     node  number       20112 deleted at time  1.3005E-02
+     solid element       18985  failed at time  1.3005E-02
+     node  number       20217 deleted at time  1.3005E-02
+     node  number       20111 deleted at time  1.3005E-02
+     solid element       18986  failed at time  1.3005E-02
+     node  number       20214 deleted at time  1.3005E-02
+     node  number       20110 deleted at time  1.3005E-02
+     solid element       18987  failed at time  1.3005E-02
+     node  number       20211 deleted at time  1.3005E-02
+     node  number       20109 deleted at time  1.3005E-02
+     solid element       18988  failed at time  1.3005E-02
+     node  number       20208 deleted at time  1.3005E-02
+     node  number       20108 deleted at time  1.3005E-02
+     solid element       18989  failed at time  1.3005E-02
+     node  number       20205 deleted at time  1.3005E-02
+     node  number       20107 deleted at time  1.3005E-02
+     solid element       18990  failed at time  1.3005E-02
+     node  number       20202 deleted at time  1.3005E-02
+     node  number       20106 deleted at time  1.3005E-02
+     solid element       18991  failed at time  1.3005E-02
+     node  number       20199 deleted at time  1.3005E-02
+     node  number       20105 deleted at time  1.3005E-02
+     solid element       18992  failed at time  1.3005E-02
+     node  number       20196 deleted at time  1.3005E-02
+     node  number       20104 deleted at time  1.3005E-02
+     solid element       18993  failed at time  1.3005E-02
+     node  number       20193 deleted at time  1.3005E-02
+     node  number       20103 deleted at time  1.3005E-02
+     solid element       18994  failed at time  1.3005E-02
+     node  number       20190 deleted at time  1.3005E-02
+     node  number       20102 deleted at time  1.3005E-02
+     solid element       18995  failed at time  1.3005E-02
+     node  number       20187 deleted at time  1.3005E-02
+     node  number       20101 deleted at time  1.3005E-02
+     solid element       18996  failed at time  1.3005E-02
+     node  number       20184 deleted at time  1.3005E-02
+     node  number       20100 deleted at time  1.3005E-02
+     solid element       18997  failed at time  1.3005E-02
+     node  number       20181 deleted at time  1.3005E-02
+     node  number       20099 deleted at time  1.3005E-02
+     solid element       18998  failed at time  1.3005E-02
+     node  number       20178 deleted at time  1.3005E-02
+     node  number       20098 deleted at time  1.3005E-02
+     solid element       18999  failed at time  1.3005E-02
+     node  number       20175 deleted at time  1.3005E-02
+     node  number       20097 deleted at time  1.3005E-02
+     solid element       19000  failed at time  1.3005E-02
+     node  number       20172 deleted at time  1.3005E-02
+     node  number       20096 deleted at time  1.3005E-02
+     solid element       19001  failed at time  1.3005E-02
+     node  number       20169 deleted at time  1.3005E-02
+     node  number       20095 deleted at time  1.3005E-02
+     solid element       19002  failed at time  1.3005E-02
+     node  number       20166 deleted at time  1.3005E-02
+     node  number       20094 deleted at time  1.3005E-02
+     solid element       19003  failed at time  1.3005E-02
+     node  number       20163 deleted at time  1.3005E-02
+     node  number       20093 deleted at time  1.3005E-02
+     solid element       19004  failed at time  1.3005E-02
+     node  number       20160 deleted at time  1.3005E-02
+     node  number       20092 deleted at time  1.3005E-02
+     solid element       19005  failed at time  1.3005E-02
+     node  number       20157 deleted at time  1.3005E-02
+     node  number       20091 deleted at time  1.3005E-02
+     solid element       19006  failed at time  1.3005E-02
+     node  number       20154 deleted at time  1.3005E-02
+     node  number       20090 deleted at time  1.3005E-02
+     solid element       19007  failed at time  1.3005E-02
+     node  number       20151 deleted at time  1.3005E-02
+     node  number       20150 deleted at time  1.3005E-02
+     node  number       20088 deleted at time  1.3005E-02
+     node  number       20089 deleted at time  1.3005E-02
+     solid element       19008  failed at time  1.3005E-02
+     node  number       19939 deleted at time  1.3005E-02
+     solid element       20609  failed at time  1.3005E-02
+     node  number       19942 deleted at time  1.3005E-02
+     solid element       20610  failed at time  1.3005E-02
+     node  number       19941 deleted at time  1.3005E-02
+     solid element       20611  failed at time  1.3005E-02
+     node  number       19940 deleted at time  1.3005E-02
+     node  number       19938 deleted at time  1.3005E-02
+     solid element       20612  failed at time  1.3005E-02
+     node  number       26707 deleted at time  1.3005E-02
+     solid element       20729  failed at time  1.3005E-02
+     node  number       27893 deleted at time  1.3005E-02
+     solid element       20730  failed at time  1.3005E-02
+     node  number       27892 deleted at time  1.3005E-02
+     solid element       20731  failed at time  1.3005E-02
+     node  number       27891 deleted at time  1.3005E-02
+     node  number       27336 deleted at time  1.3005E-02
+     solid element       20732  failed at time  1.3005E-02
+     node  number       26706 deleted at time  1.3005E-02
+     solid element       20849  failed at time  1.3005E-02
+     node  number       27896 deleted at time  1.3005E-02
+     solid element       20850  failed at time  1.3005E-02
+     node  number       27895 deleted at time  1.3005E-02
+     solid element       20851  failed at time  1.3005E-02
+     node  number       27894 deleted at time  1.3005E-02
+     node  number       27335 deleted at time  1.3005E-02
+     solid element       20852  failed at time  1.3005E-02
+     node  number       26705 deleted at time  1.3005E-02
+     solid element       20969  failed at time  1.3005E-02
+     node  number       27899 deleted at time  1.3005E-02
+     solid element       20970  failed at time  1.3005E-02
+     node  number       27898 deleted at time  1.3005E-02
+     solid element       20971  failed at time  1.3005E-02
+     node  number       27897 deleted at time  1.3005E-02
+     node  number       27334 deleted at time  1.3005E-02
+     solid element       20972  failed at time  1.3005E-02
+     node  number       26704 deleted at time  1.3005E-02
+     solid element       21089  failed at time  1.3005E-02
+     node  number       27902 deleted at time  1.3005E-02
+     solid element       21090  failed at time  1.3005E-02
+     node  number       27901 deleted at time  1.3005E-02
+     solid element       21091  failed at time  1.3005E-02
+     node  number       27900 deleted at time  1.3005E-02
+     node  number       27333 deleted at time  1.3005E-02
+     solid element       21092  failed at time  1.3005E-02
+     node  number       26703 deleted at time  1.3005E-02
+     solid element       21209  failed at time  1.3005E-02
+     node  number       27905 deleted at time  1.3005E-02
+     solid element       21210  failed at time  1.3005E-02
+     node  number       27904 deleted at time  1.3005E-02
+     solid element       21211  failed at time  1.3005E-02
+     node  number       27903 deleted at time  1.3005E-02
+     node  number       27332 deleted at time  1.3005E-02
+     solid element       21212  failed at time  1.3005E-02
+     node  number       26702 deleted at time  1.3005E-02
+     solid element       21329  failed at time  1.3005E-02
+     node  number       27908 deleted at time  1.3005E-02
+     solid element       21330  failed at time  1.3005E-02
+     node  number       27907 deleted at time  1.3005E-02
+     solid element       21331  failed at time  1.3005E-02
+     node  number       27906 deleted at time  1.3005E-02
+     node  number       27331 deleted at time  1.3005E-02
+     solid element       21332  failed at time  1.3005E-02
+     node  number       26701 deleted at time  1.3005E-02
+     solid element       21449  failed at time  1.3005E-02
+     node  number       27911 deleted at time  1.3005E-02
+     solid element       21450  failed at time  1.3005E-02
+     node  number       27910 deleted at time  1.3005E-02
+     solid element       21451  failed at time  1.3005E-02
+     node  number       27909 deleted at time  1.3005E-02
+     node  number       27330 deleted at time  1.3005E-02
+     solid element       21452  failed at time  1.3005E-02
+     node  number       26700 deleted at time  1.3005E-02
+     solid element       21569  failed at time  1.3005E-02
+     node  number       27914 deleted at time  1.3005E-02
+     solid element       21570  failed at time  1.3005E-02
+     node  number       27913 deleted at time  1.3005E-02
+     solid element       21571  failed at time  1.3005E-02
+     node  number       27912 deleted at time  1.3005E-02
+     node  number       27329 deleted at time  1.3005E-02
+     solid element       21572  failed at time  1.3005E-02
+     node  number       26699 deleted at time  1.3005E-02
+     solid element       21689  failed at time  1.3005E-02
+     node  number       27917 deleted at time  1.3005E-02
+     solid element       21690  failed at time  1.3005E-02
+     node  number       27916 deleted at time  1.3005E-02
+     solid element       21691  failed at time  1.3005E-02
+     node  number       27915 deleted at time  1.3005E-02
+     node  number       27328 deleted at time  1.3005E-02
+     solid element       21692  failed at time  1.3005E-02
+     node  number       26698 deleted at time  1.3005E-02
+     solid element       21809  failed at time  1.3005E-02
+     node  number       27920 deleted at time  1.3005E-02
+     solid element       21810  failed at time  1.3005E-02
+     node  number       27919 deleted at time  1.3005E-02
+     solid element       21811  failed at time  1.3005E-02
+     node  number       27918 deleted at time  1.3005E-02
+     node  number       27327 deleted at time  1.3005E-02
+     solid element       21812  failed at time  1.3005E-02
+     node  number       26697 deleted at time  1.3005E-02
+     solid element       21929  failed at time  1.3005E-02
+     node  number       27923 deleted at time  1.3005E-02
+     solid element       21930  failed at time  1.3005E-02
+     node  number       27922 deleted at time  1.3005E-02
+     solid element       21931  failed at time  1.3005E-02
+     node  number       27921 deleted at time  1.3005E-02
+     node  number       27326 deleted at time  1.3005E-02
+     solid element       21932  failed at time  1.3005E-02
+     node  number       26696 deleted at time  1.3005E-02
+     solid element       22049  failed at time  1.3005E-02
+     node  number       27926 deleted at time  1.3005E-02
+     solid element       22050  failed at time  1.3005E-02
+     node  number       27925 deleted at time  1.3005E-02
+     solid element       22051  failed at time  1.3005E-02
+     node  number       27924 deleted at time  1.3005E-02
+     node  number       27325 deleted at time  1.3005E-02
+     solid element       22052  failed at time  1.3005E-02
+     node  number       26695 deleted at time  1.3005E-02
+     solid element       22169  failed at time  1.3005E-02
+     node  number       27929 deleted at time  1.3005E-02
+     solid element       22170  failed at time  1.3005E-02
+     node  number       27928 deleted at time  1.3005E-02
+     solid element       22171  failed at time  1.3005E-02
+     node  number       27927 deleted at time  1.3005E-02
+     node  number       27324 deleted at time  1.3005E-02
+     solid element       22172  failed at time  1.3005E-02
+     node  number       26694 deleted at time  1.3005E-02
+     solid element       22289  failed at time  1.3005E-02
+     node  number       27932 deleted at time  1.3005E-02
+     solid element       22290  failed at time  1.3005E-02
+     node  number       27931 deleted at time  1.3005E-02
+     solid element       22291  failed at time  1.3005E-02
+     node  number       27930 deleted at time  1.3005E-02
+     node  number       27323 deleted at time  1.3005E-02
+     solid element       22292  failed at time  1.3005E-02
+     node  number       26693 deleted at time  1.3005E-02
+     solid element       22409  failed at time  1.3005E-02
+     node  number       27935 deleted at time  1.3005E-02
+     solid element       22410  failed at time  1.3005E-02
+     node  number       27934 deleted at time  1.3005E-02
+     solid element       22411  failed at time  1.3005E-02
+     node  number       27933 deleted at time  1.3005E-02
+     node  number       27322 deleted at time  1.3005E-02
+     solid element       22412  failed at time  1.3005E-02
+     node  number       26692 deleted at time  1.3005E-02
+     solid element       22529  failed at time  1.3005E-02
+     node  number       27938 deleted at time  1.3005E-02
+     solid element       22530  failed at time  1.3005E-02
+     node  number       27937 deleted at time  1.3005E-02
+     solid element       22531  failed at time  1.3005E-02
+     node  number       27936 deleted at time  1.3005E-02
+     node  number       27321 deleted at time  1.3005E-02
+     solid element       22532  failed at time  1.3005E-02
+     node  number       26691 deleted at time  1.3005E-02
+     solid element       22649  failed at time  1.3005E-02
+     node  number       27941 deleted at time  1.3005E-02
+     solid element       22650  failed at time  1.3005E-02
+     node  number       27940 deleted at time  1.3005E-02
+     solid element       22651  failed at time  1.3005E-02
+     node  number       27939 deleted at time  1.3005E-02
+     node  number       27320 deleted at time  1.3005E-02
+     solid element       22652  failed at time  1.3005E-02
+     node  number       26690 deleted at time  1.3005E-02
+     solid element       22769  failed at time  1.3005E-02
+     node  number       27944 deleted at time  1.3005E-02
+     solid element       22770  failed at time  1.3005E-02
+     node  number       27943 deleted at time  1.3005E-02
+     solid element       22771  failed at time  1.3005E-02
+     node  number       27942 deleted at time  1.3005E-02
+     node  number       27319 deleted at time  1.3005E-02
+     solid element       22772  failed at time  1.3005E-02
+     node  number       26689 deleted at time  1.3005E-02
+     node  number       26688 deleted at time  1.3005E-02
+     solid element       22889  failed at time  1.3005E-02
+     node  number       27947 deleted at time  1.3005E-02
+     node  number       27890 deleted at time  1.3005E-02
+     solid element       22890  failed at time  1.3005E-02
+     node  number       27946 deleted at time  1.3005E-02
+     node  number       27889 deleted at time  1.3005E-02
+     solid element       22891  failed at time  1.3005E-02
+     node  number       27945 deleted at time  1.3005E-02
+     node  number       27318 deleted at time  1.3005E-02
+     node  number       27888 deleted at time  1.3005E-02
+     node  number       27288 deleted at time  1.3005E-02
+     solid element       22892  failed at time  1.3005E-02
+ f a i l e d   e l e m e n t   r e p o r t  time=  1.3005E-02
+     number of failed solid  elements =         540
+     number of failed beam   elements =           0
+     number of failed shell  elements =           0
+     number of failed tshell elements =           0
+     solid element           1  failed at time  2.6011E-02
+     solid element           2  failed at time  2.6011E-02
+     solid element           3  failed at time  2.6011E-02
+     solid element           4  failed at time  2.6011E-02
+     solid element           5  failed at time  2.6011E-02
+     node  number         235 deleted at time  2.6011E-02
+     solid element           6  failed at time  2.6011E-02
+     node  number         234 deleted at time  2.6011E-02
+     solid element           7  failed at time  2.6011E-02
+     node  number         233 deleted at time  2.6011E-02
+     solid element           8  failed at time  2.6011E-02
+     solid element           9  failed at time  2.6011E-02
+     node  number         232 deleted at time  2.6011E-02
+     solid element          10  failed at time  2.6011E-02
+     node  number         231 deleted at time  2.6011E-02
+     solid element          11  failed at time  2.6011E-02
+     node  number         230 deleted at time  2.6011E-02
+     solid element          12  failed at time  2.6011E-02
+     solid element          13  failed at time  2.6011E-02
+     node  number         229 deleted at time  2.6011E-02
+     node  number          32 deleted at time  2.6011E-02
+     solid element          14  failed at time  2.6011E-02
+     node  number         228 deleted at time  2.6011E-02
+     node  number          31 deleted at time  2.6011E-02
+     solid element          15  failed at time  2.6011E-02
+     node  number         227 deleted at time  2.6011E-02
+     node  number          30 deleted at time  2.6011E-02
+     solid element          16  failed at time  2.6011E-02
+     solid element         129  failed at time  2.6011E-02
+     solid element         130  failed at time  2.6011E-02
+     solid element         131  failed at time  2.6011E-02
+     solid element         132  failed at time  2.6011E-02
+     solid element         133  failed at time  2.6011E-02
+     node  number         253 deleted at time  2.6011E-02
+     solid element         134  failed at time  2.6011E-02
+     node  number         252 deleted at time  2.6011E-02
+     solid element         135  failed at time  2.6011E-02
+     node  number         251 deleted at time  2.6011E-02
+     node  number         226 deleted at time  2.6011E-02
+     solid element         136  failed at time  2.6011E-02
+     solid element         137  failed at time  2.6011E-02
+     node  number         250 deleted at time  2.6011E-02
+     solid element         138  failed at time  2.6011E-02
+     node  number         249 deleted at time  2.6011E-02
+     solid element         139  failed at time  2.6011E-02
+     node  number         248 deleted at time  2.6011E-02
+     node  number         225 deleted at time  2.6011E-02
+     solid element         140  failed at time  2.6011E-02
+     solid element         141  failed at time  2.6011E-02
+     node  number         247 deleted at time  2.6011E-02
+     solid element         142  failed at time  2.6011E-02
+     node  number         246 deleted at time  2.6011E-02
+     solid element         143  failed at time  2.6011E-02
+     node  number         245 deleted at time  2.6011E-02
+     node  number         224 deleted at time  2.6011E-02
+     solid element         144  failed at time  2.6011E-02
+     node  number          29 deleted at time  2.6011E-02
+     solid element         257  failed at time  2.6011E-02
+     node  number         218 deleted at time  2.6011E-02
+     solid element         258  failed at time  2.6011E-02
+     node  number         219 deleted at time  2.6011E-02
+     solid element         259  failed at time  2.6011E-02
+     node  number         220 deleted at time  2.6011E-02
+     node  number         217 deleted at time  2.6011E-02
+     solid element         260  failed at time  2.6011E-02
+     node  number          28 deleted at time  2.6011E-02
+     solid element         261  failed at time  2.6011E-02
+     node  number         244 deleted at time  2.6011E-02
+     solid element         262  failed at time  2.6011E-02
+     node  number         243 deleted at time  2.6011E-02
+     solid element         263  failed at time  2.6011E-02
+     node  number         242 deleted at time  2.6011E-02
+     node  number         223 deleted at time  2.6011E-02
+     solid element         264  failed at time  2.6011E-02
+     node  number          27 deleted at time  2.6011E-02
+     solid element         265  failed at time  2.6011E-02
+     node  number         241 deleted at time  2.6011E-02
+     solid element         266  failed at time  2.6011E-02
+     node  number         240 deleted at time  2.6011E-02
+     solid element         267  failed at time  2.6011E-02
+     node  number         239 deleted at time  2.6011E-02
+     node  number         222 deleted at time  2.6011E-02
+     solid element         268  failed at time  2.6011E-02
+     node  number          26 deleted at time  2.6011E-02
+     solid element         269  failed at time  2.6011E-02
+     node  number         238 deleted at time  2.6011E-02
+     solid element         270  failed at time  2.6011E-02
+     node  number         237 deleted at time  2.6011E-02
+     solid element         271  failed at time  2.6011E-02
+     node  number         236 deleted at time  2.6011E-02
+     node  number         221 deleted at time  2.6011E-02
+     solid element         272  failed at time  2.6011E-02
+     node  number          18 deleted at time  2.6011E-02
+     solid element         385  failed at time  2.6011E-02
+     node  number          83 deleted at time  2.6011E-02
+     solid element         393  failed at time  2.6011E-02
+     node  number          84 deleted at time  2.6011E-02
+     solid element         401  failed at time  2.6011E-02
+     node  number          85 deleted at time  2.6011E-02
+     solid element         409  failed at time  2.6011E-02
+     node  number          86 deleted at time  2.6011E-02
+     solid element         417  failed at time  2.6011E-02
+     node  number          87 deleted at time  2.6011E-02
+     solid element         425  failed at time  2.6011E-02
+     node  number          88 deleted at time  2.6011E-02
+     solid element         433  failed at time  2.6011E-02
+     node  number          89 deleted at time  2.6011E-02
+     solid element         441  failed at time  2.6011E-02
+     node  number         578 deleted at time  2.6011E-02
+     solid element         449  failed at time  2.6011E-02
+     node  number        1087 deleted at time  2.6011E-02
+     solid element         457  failed at time  2.6011E-02
+     node  number        1068 deleted at time  2.6011E-02
+     solid element         465  failed at time  2.6011E-02
+     node  number        1049 deleted at time  2.6011E-02
+     solid element         473  failed at time  2.6011E-02
+     node  number        1030 deleted at time  2.6011E-02
+     solid element         481  failed at time  2.6011E-02
+     node  number        1011 deleted at time  2.6011E-02
+     solid element         489  failed at time  2.6011E-02
+     node  number         992 deleted at time  2.6011E-02
+     solid element         497  failed at time  2.6011E-02
+     node  number         973 deleted at time  2.6011E-02
+     solid element         505  failed at time  2.6011E-02
+     node  number         579 deleted at time  2.6011E-02
+     solid element         513  failed at time  2.6011E-02
+     node  number        1088 deleted at time  2.6011E-02
+     solid element         521  failed at time  2.6011E-02
+     node  number        1069 deleted at time  2.6011E-02
+     solid element         529  failed at time  2.6011E-02
+     node  number        1050 deleted at time  2.6011E-02
+     solid element         537  failed at time  2.6011E-02
+     node  number        1031 deleted at time  2.6011E-02
+     solid element         545  failed at time  2.6011E-02
+     node  number        1012 deleted at time  2.6011E-02
+     solid element         553  failed at time  2.6011E-02
+     node  number         993 deleted at time  2.6011E-02
+     solid element         561  failed at time  2.6011E-02
+     node  number         974 deleted at time  2.6011E-02
+     solid element         569  failed at time  2.6011E-02
+     node  number         580 deleted at time  2.6011E-02
+     solid element         577  failed at time  2.6011E-02
+     node  number        1089 deleted at time  2.6011E-02
+     solid element         585  failed at time  2.6011E-02
+     node  number        1070 deleted at time  2.6011E-02
+     solid element         593  failed at time  2.6011E-02
+     node  number        1051 deleted at time  2.6011E-02
+     solid element         601  failed at time  2.6011E-02
+     node  number        1032 deleted at time  2.6011E-02
+     solid element         609  failed at time  2.6011E-02
+     node  number        1013 deleted at time  2.6011E-02
+     solid element         617  failed at time  2.6011E-02
+     node  number         994 deleted at time  2.6011E-02
+     solid element         625  failed at time  2.6011E-02
+     node  number         975 deleted at time  2.6011E-02
+     solid element         633  failed at time  2.6011E-02
+     node  number         581 deleted at time  2.6011E-02
+     solid element         641  failed at time  2.6011E-02
+     node  number        1090 deleted at time  2.6011E-02
+     solid element         649  failed at time  2.6011E-02
+     node  number        1071 deleted at time  2.6011E-02
+     solid element         657  failed at time  2.6011E-02
+     node  number        1052 deleted at time  2.6011E-02
+     solid element         665  failed at time  2.6011E-02
+     node  number        1033 deleted at time  2.6011E-02
+     solid element         673  failed at time  2.6011E-02
+     node  number        1014 deleted at time  2.6011E-02
+     solid element         681  failed at time  2.6011E-02
+     node  number         995 deleted at time  2.6011E-02
+     solid element         689  failed at time  2.6011E-02
+     node  number         976 deleted at time  2.6011E-02
+     solid element         697  failed at time  2.6011E-02
+     node  number         582 deleted at time  2.6011E-02
+     solid element         705  failed at time  2.6011E-02
+     node  number        1091 deleted at time  2.6011E-02
+     solid element         713  failed at time  2.6011E-02
+     node  number        1072 deleted at time  2.6011E-02
+     solid element         721  failed at time  2.6011E-02
+     node  number        1053 deleted at time  2.6011E-02
+     solid element         729  failed at time  2.6011E-02
+     node  number        1034 deleted at time  2.6011E-02
+     solid element         737  failed at time  2.6011E-02
+     node  number        1015 deleted at time  2.6011E-02
+     solid element         745  failed at time  2.6011E-02
+     node  number         996 deleted at time  2.6011E-02
+     solid element         753  failed at time  2.6011E-02
+     node  number         977 deleted at time  2.6011E-02
+     solid element         761  failed at time  2.6011E-02
+     node  number         583 deleted at time  2.6011E-02
+     solid element         769  failed at time  2.6011E-02
+     node  number        1092 deleted at time  2.6011E-02
+     solid element         777  failed at time  2.6011E-02
+     node  number        1073 deleted at time  2.6011E-02
+     solid element         785  failed at time  2.6011E-02
+     node  number        1054 deleted at time  2.6011E-02
+     solid element         793  failed at time  2.6011E-02
+     node  number        1035 deleted at time  2.6011E-02
+     solid element         801  failed at time  2.6011E-02
+     node  number        1016 deleted at time  2.6011E-02
+     solid element         809  failed at time  2.6011E-02
+     node  number         997 deleted at time  2.6011E-02
+     solid element         817  failed at time  2.6011E-02
+     node  number         978 deleted at time  2.6011E-02
+     solid element         825  failed at time  2.6011E-02
+     node  number         584 deleted at time  2.6011E-02
+     solid element         833  failed at time  2.6011E-02
+     node  number        1093 deleted at time  2.6011E-02
+     solid element         841  failed at time  2.6011E-02
+     node  number        1074 deleted at time  2.6011E-02
+     solid element         849  failed at time  2.6011E-02
+     node  number        1055 deleted at time  2.6011E-02
+     solid element         857  failed at time  2.6011E-02
+     node  number        1036 deleted at time  2.6011E-02
+     solid element         865  failed at time  2.6011E-02
+     node  number        1017 deleted at time  2.6011E-02
+     solid element         873  failed at time  2.6011E-02
+     node  number         998 deleted at time  2.6011E-02
+     solid element         881  failed at time  2.6011E-02
+     node  number         979 deleted at time  2.6011E-02
+     solid element         889  failed at time  2.6011E-02
+     node  number         585 deleted at time  2.6011E-02
+     solid element         897  failed at time  2.6011E-02
+     node  number        1094 deleted at time  2.6011E-02
+     solid element         905  failed at time  2.6011E-02
+     node  number        1075 deleted at time  2.6011E-02
+     solid element         913  failed at time  2.6011E-02
+     node  number        1056 deleted at time  2.6011E-02
+     solid element         921  failed at time  2.6011E-02
+     node  number        1037 deleted at time  2.6011E-02
+     solid element         929  failed at time  2.6011E-02
+     node  number        1018 deleted at time  2.6011E-02
+     solid element         937  failed at time  2.6011E-02
+     node  number         999 deleted at time  2.6011E-02
+     solid element         945  failed at time  2.6011E-02
+     node  number         980 deleted at time  2.6011E-02
+     solid element         953  failed at time  2.6011E-02
+     node  number         586 deleted at time  2.6011E-02
+     solid element         961  failed at time  2.6011E-02
+     node  number        1095 deleted at time  2.6011E-02
+     solid element         969  failed at time  2.6011E-02
+     node  number        1076 deleted at time  2.6011E-02
+     solid element         977  failed at time  2.6011E-02
+     node  number        1057 deleted at time  2.6011E-02
+     solid element         985  failed at time  2.6011E-02
+     node  number        1038 deleted at time  2.6011E-02
+     solid element         993  failed at time  2.6011E-02
+     node  number        1019 deleted at time  2.6011E-02
+     solid element        1001  failed at time  2.6011E-02
+     node  number        1000 deleted at time  2.6011E-02
+     solid element        1009  failed at time  2.6011E-02
+     node  number         981 deleted at time  2.6011E-02
+     solid element        1017  failed at time  2.6011E-02
+     node  number         587 deleted at time  2.6011E-02
+     solid element        1025  failed at time  2.6011E-02
+     node  number        1096 deleted at time  2.6011E-02
+     solid element        1033  failed at time  2.6011E-02
+     node  number        1077 deleted at time  2.6011E-02
+     solid element        1041  failed at time  2.6011E-02
+     node  number        1058 deleted at time  2.6011E-02
+     solid element        1049  failed at time  2.6011E-02
+     node  number        1039 deleted at time  2.6011E-02
+     solid element        1057  failed at time  2.6011E-02
+     node  number        1020 deleted at time  2.6011E-02
+     solid element        1065  failed at time  2.6011E-02
+     node  number        1001 deleted at time  2.6011E-02
+     solid element        1073  failed at time  2.6011E-02
+     node  number         982 deleted at time  2.6011E-02
+     solid element        1081  failed at time  2.6011E-02
+     node  number         588 deleted at time  2.6011E-02
+     solid element        1089  failed at time  2.6011E-02
+     node  number        1097 deleted at time  2.6011E-02
+     solid element        1097  failed at time  2.6011E-02
+     node  number        1078 deleted at time  2.6011E-02
+     solid element        1105  failed at time  2.6011E-02
+     node  number        1059 deleted at time  2.6011E-02
+     solid element        1113  failed at time  2.6011E-02
+     node  number        1040 deleted at time  2.6011E-02
+     solid element        1121  failed at time  2.6011E-02
+     node  number        1021 deleted at time  2.6011E-02
+     solid element        1129  failed at time  2.6011E-02
+     node  number        1002 deleted at time  2.6011E-02
+     solid element        1137  failed at time  2.6011E-02
+     node  number         983 deleted at time  2.6011E-02
+     solid element        1145  failed at time  2.6011E-02
+     node  number         589 deleted at time  2.6011E-02
+     solid element        1153  failed at time  2.6011E-02
+     node  number        1098 deleted at time  2.6011E-02
+     solid element        1161  failed at time  2.6011E-02
+     node  number        1079 deleted at time  2.6011E-02
+     solid element        1169  failed at time  2.6011E-02
+     node  number        1060 deleted at time  2.6011E-02
+     solid element        1177  failed at time  2.6011E-02
+     node  number        1041 deleted at time  2.6011E-02
+     solid element        1185  failed at time  2.6011E-02
+     node  number        1022 deleted at time  2.6011E-02
+     solid element        1193  failed at time  2.6011E-02
+     node  number        1003 deleted at time  2.6011E-02
+     solid element        1201  failed at time  2.6011E-02
+     node  number         984 deleted at time  2.6011E-02
+     solid element        1209  failed at time  2.6011E-02
+     node  number         590 deleted at time  2.6011E-02
+     solid element        1217  failed at time  2.6011E-02
+     node  number        1099 deleted at time  2.6011E-02
+     solid element        1225  failed at time  2.6011E-02
+     node  number        1080 deleted at time  2.6011E-02
+     solid element        1233  failed at time  2.6011E-02
+     node  number        1061 deleted at time  2.6011E-02
+     solid element        1241  failed at time  2.6011E-02
+     node  number        1042 deleted at time  2.6011E-02
+     solid element        1249  failed at time  2.6011E-02
+     node  number        1023 deleted at time  2.6011E-02
+     solid element        1257  failed at time  2.6011E-02
+     node  number        1004 deleted at time  2.6011E-02
+     solid element        1265  failed at time  2.6011E-02
+     node  number         985 deleted at time  2.6011E-02
+     solid element        1273  failed at time  2.6011E-02
+     node  number         591 deleted at time  2.6011E-02
+     solid element        1281  failed at time  2.6011E-02
+     node  number        1100 deleted at time  2.6011E-02
+     solid element        1289  failed at time  2.6011E-02
+     node  number        1081 deleted at time  2.6011E-02
+     solid element        1297  failed at time  2.6011E-02
+     node  number        1062 deleted at time  2.6011E-02
+     solid element        1305  failed at time  2.6011E-02
+     node  number        1043 deleted at time  2.6011E-02
+     solid element        1313  failed at time  2.6011E-02
+     node  number        1024 deleted at time  2.6011E-02
+     solid element        1321  failed at time  2.6011E-02
+     node  number        1005 deleted at time  2.6011E-02
+     solid element        1329  failed at time  2.6011E-02
+     node  number         986 deleted at time  2.6011E-02
+     solid element        1337  failed at time  2.6011E-02
+     node  number         592 deleted at time  2.6011E-02
+     solid element        1345  failed at time  2.6011E-02
+     node  number        1101 deleted at time  2.6011E-02
+     solid element        1353  failed at time  2.6011E-02
+     node  number        1082 deleted at time  2.6011E-02
+     solid element        1361  failed at time  2.6011E-02
+     node  number        1063 deleted at time  2.6011E-02
+     solid element        1369  failed at time  2.6011E-02
+     node  number        1044 deleted at time  2.6011E-02
+     solid element        1377  failed at time  2.6011E-02
+     node  number        1025 deleted at time  2.6011E-02
+     solid element        1385  failed at time  2.6011E-02
+     node  number        1006 deleted at time  2.6011E-02
+     solid element        1393  failed at time  2.6011E-02
+     node  number         987 deleted at time  2.6011E-02
+     solid element        1401  failed at time  2.6011E-02
+     node  number         593 deleted at time  2.6011E-02
+     solid element        1409  failed at time  2.6011E-02
+     node  number        1102 deleted at time  2.6011E-02
+     solid element        1417  failed at time  2.6011E-02
+     node  number        1083 deleted at time  2.6011E-02
+     solid element        1425  failed at time  2.6011E-02
+     node  number        1064 deleted at time  2.6011E-02
+     solid element        1433  failed at time  2.6011E-02
+     node  number        1045 deleted at time  2.6011E-02
+     solid element        1441  failed at time  2.6011E-02
+     node  number        1026 deleted at time  2.6011E-02
+     solid element        1449  failed at time  2.6011E-02
+     node  number        1007 deleted at time  2.6011E-02
+     solid element        1457  failed at time  2.6011E-02
+     node  number         988 deleted at time  2.6011E-02
+     solid element        1465  failed at time  2.6011E-02
+     node  number         594 deleted at time  2.6011E-02
+     solid element        1473  failed at time  2.6011E-02
+     node  number        1103 deleted at time  2.6011E-02
+     solid element        1481  failed at time  2.6011E-02
+     node  number        1084 deleted at time  2.6011E-02
+     solid element        1489  failed at time  2.6011E-02
+     node  number        1065 deleted at time  2.6011E-02
+     solid element        1497  failed at time  2.6011E-02
+     node  number        1046 deleted at time  2.6011E-02
+     solid element        1505  failed at time  2.6011E-02
+     node  number        1027 deleted at time  2.6011E-02
+     solid element        1513  failed at time  2.6011E-02
+     node  number        1008 deleted at time  2.6011E-02
+     solid element        1521  failed at time  2.6011E-02
+     node  number         989 deleted at time  2.6011E-02
+     solid element        1529  failed at time  2.6011E-02
+     node  number         595 deleted at time  2.6011E-02
+     solid element        1537  failed at time  2.6011E-02
+     node  number        1104 deleted at time  2.6011E-02
+     solid element        1545  failed at time  2.6011E-02
+     node  number        1085 deleted at time  2.6011E-02
+     solid element        1553  failed at time  2.6011E-02
+     node  number        1066 deleted at time  2.6011E-02
+     solid element        1561  failed at time  2.6011E-02
+     node  number        1047 deleted at time  2.6011E-02
+     solid element        1569  failed at time  2.6011E-02
+     node  number        1028 deleted at time  2.6011E-02
+     solid element        1577  failed at time  2.6011E-02
+     node  number        1009 deleted at time  2.6011E-02
+     solid element        1585  failed at time  2.6011E-02
+     node  number         990 deleted at time  2.6011E-02
+     solid element        1593  failed at time  2.6011E-02
+     node  number         596 deleted at time  2.6011E-02
+     node  number         570 deleted at time  2.6011E-02
+     solid element        1601  failed at time  2.6011E-02
+     node  number        1105 deleted at time  2.6011E-02
+     node  number         731 deleted at time  2.6011E-02
+     solid element        1609  failed at time  2.6011E-02
+     node  number        1086 deleted at time  2.6011E-02
+     node  number         732 deleted at time  2.6011E-02
+     solid element        1617  failed at time  2.6011E-02
+     node  number        1067 deleted at time  2.6011E-02
+     node  number         733 deleted at time  2.6011E-02
+     solid element        1625  failed at time  2.6011E-02
+     node  number        1048 deleted at time  2.6011E-02
+     node  number         734 deleted at time  2.6011E-02
+     solid element        1633  failed at time  2.6011E-02
+     node  number        1029 deleted at time  2.6011E-02
+     node  number         735 deleted at time  2.6011E-02
+     solid element        1641  failed at time  2.6011E-02
+     node  number        1010 deleted at time  2.6011E-02
+     node  number         736 deleted at time  2.6011E-02
+     solid element        1649  failed at time  2.6011E-02
+     node  number         991 deleted at time  2.6011E-02
+     node  number         737 deleted at time  2.6011E-02
+     solid element        1657  failed at time  2.6011E-02
+     solid element        1677  failed at time  2.6011E-02
+     node  number        2293 deleted at time  2.6011E-02
+     node  number        2292 deleted at time  2.6011E-02
+     solid element        1693  failed at time  2.6011E-02
+     node  number        2294 deleted at time  2.6011E-02
+     node  number        2291 deleted at time  2.6011E-02
+     solid element        1709  failed at time  2.6011E-02
+     node  number        2295 deleted at time  2.6011E-02
+     node  number        2290 deleted at time  2.6011E-02
+     solid element        1725  failed at time  2.6011E-02
+     node  number        2296 deleted at time  2.6011E-02
+     node  number        2289 deleted at time  2.6011E-02
+     solid element        1741  failed at time  2.6011E-02
+     node  number        2297 deleted at time  2.6011E-02
+     node  number        2288 deleted at time  2.6011E-02
+     solid element        1757  failed at time  2.6011E-02
+     node  number        2298 deleted at time  2.6011E-02
+     node  number        2287 deleted at time  2.6011E-02
+     solid element        1773  failed at time  2.6011E-02
+     node  number        2299 deleted at time  2.6011E-02
+     node  number        2286 deleted at time  2.6011E-02
+     solid element        1789  failed at time  2.6011E-02
+     node  number        2300 deleted at time  2.6011E-02
+     node  number        2285 deleted at time  2.6011E-02
+     solid element        1805  failed at time  2.6011E-02
+     node  number        2301 deleted at time  2.6011E-02
+     node  number        2284 deleted at time  2.6011E-02
+     solid element        1821  failed at time  2.6011E-02
+     node  number        2302 deleted at time  2.6011E-02
+     node  number        2283 deleted at time  2.6011E-02
+     solid element        1837  failed at time  2.6011E-02
+     node  number        2303 deleted at time  2.6011E-02
+     node  number        2282 deleted at time  2.6011E-02
+     solid element        1853  failed at time  2.6011E-02
+     node  number        2304 deleted at time  2.6011E-02
+     node  number        2281 deleted at time  2.6011E-02
+     solid element        1869  failed at time  2.6011E-02
+     node  number        2305 deleted at time  2.6011E-02
+     node  number        2280 deleted at time  2.6011E-02
+     solid element        1885  failed at time  2.6011E-02
+     node  number        2306 deleted at time  2.6011E-02
+     node  number        2279 deleted at time  2.6011E-02
+     solid element        1901  failed at time  2.6011E-02
+     node  number        2307 deleted at time  2.6011E-02
+     node  number        2278 deleted at time  2.6011E-02
+     solid element        1917  failed at time  2.6011E-02
+     node  number        2308 deleted at time  2.6011E-02
+     node  number        2277 deleted at time  2.6011E-02
+     solid element        1933  failed at time  2.6011E-02
+     node  number        2309 deleted at time  2.6011E-02
+     node  number        2276 deleted at time  2.6011E-02
+     solid element        1949  failed at time  2.6011E-02
+     node  number        2310 deleted at time  2.6011E-02
+     node  number        2275 deleted at time  2.6011E-02
+     solid element        1965  failed at time  2.6011E-02
+     node  number        2311 deleted at time  2.6011E-02
+     node  number        2274 deleted at time  2.6011E-02
+     node  number        2223 deleted at time  2.6011E-02
+     node  number        2222 deleted at time  2.6011E-02
+     solid element        1981  failed at time  2.6011E-02
+     solid element        1997  failed at time  2.6011E-02
+     solid element        1998  failed at time  2.6011E-02
+     node  number         821 deleted at time  2.6011E-02
+     solid element        2013  failed at time  2.6011E-02
+     node  number        2388 deleted at time  2.6011E-02
+     node  number        2407 deleted at time  2.6011E-02
+     solid element        2014  failed at time  2.6011E-02
+     node  number         822 deleted at time  2.6011E-02
+     solid element        2029  failed at time  2.6011E-02
+     node  number        2389 deleted at time  2.6011E-02
+     node  number        2408 deleted at time  2.6011E-02
+     solid element        2030  failed at time  2.6011E-02
+     node  number         823 deleted at time  2.6011E-02
+     solid element        2045  failed at time  2.6011E-02
+     node  number        2390 deleted at time  2.6011E-02
+     node  number        2409 deleted at time  2.6011E-02
+     solid element        2046  failed at time  2.6011E-02
+     node  number         824 deleted at time  2.6011E-02
+     solid element        2061  failed at time  2.6011E-02
+     node  number        2391 deleted at time  2.6011E-02
+     node  number        2410 deleted at time  2.6011E-02
+     solid element        2062  failed at time  2.6011E-02
+     node  number         825 deleted at time  2.6011E-02
+     solid element        2077  failed at time  2.6011E-02
+     node  number        2392 deleted at time  2.6011E-02
+     node  number        2411 deleted at time  2.6011E-02
+     solid element        2078  failed at time  2.6011E-02
+     node  number         826 deleted at time  2.6011E-02
+     solid element        2093  failed at time  2.6011E-02
+     node  number        2393 deleted at time  2.6011E-02
+     node  number        2412 deleted at time  2.6011E-02
+     solid element        2094  failed at time  2.6011E-02
+     node  number         827 deleted at time  2.6011E-02
+     solid element        2109  failed at time  2.6011E-02
+     node  number        2394 deleted at time  2.6011E-02
+     node  number        2413 deleted at time  2.6011E-02
+     solid element        2110  failed at time  2.6011E-02
+     node  number         828 deleted at time  2.6011E-02
+     solid element        2125  failed at time  2.6011E-02
+     node  number        2395 deleted at time  2.6011E-02
+     node  number        2414 deleted at time  2.6011E-02
+     solid element        2126  failed at time  2.6011E-02
+     node  number         829 deleted at time  2.6011E-02
+     solid element        2141  failed at time  2.6011E-02
+     node  number        2396 deleted at time  2.6011E-02
+     node  number        2415 deleted at time  2.6011E-02
+     solid element        2142  failed at time  2.6011E-02
+     node  number         830 deleted at time  2.6011E-02
+     solid element        2157  failed at time  2.6011E-02
+     node  number        2397 deleted at time  2.6011E-02
+     node  number        2416 deleted at time  2.6011E-02
+     solid element        2158  failed at time  2.6011E-02
+     node  number         831 deleted at time  2.6011E-02
+     solid element        2173  failed at time  2.6011E-02
+     node  number        2398 deleted at time  2.6011E-02
+     node  number        2417 deleted at time  2.6011E-02
+     solid element        2174  failed at time  2.6011E-02
+     node  number         832 deleted at time  2.6011E-02
+     solid element        2189  failed at time  2.6011E-02
+     node  number        2399 deleted at time  2.6011E-02
+     node  number        2418 deleted at time  2.6011E-02
+     solid element        2190  failed at time  2.6011E-02
+     node  number         833 deleted at time  2.6011E-02
+     solid element        2205  failed at time  2.6011E-02
+     node  number        2400 deleted at time  2.6011E-02
+     node  number        2419 deleted at time  2.6011E-02
+     solid element        2206  failed at time  2.6011E-02
+     node  number         834 deleted at time  2.6011E-02
+     solid element        2221  failed at time  2.6011E-02
+     node  number        2401 deleted at time  2.6011E-02
+     node  number        2420 deleted at time  2.6011E-02
+     solid element        2222  failed at time  2.6011E-02
+     node  number         835 deleted at time  2.6011E-02
+     solid element        2237  failed at time  2.6011E-02
+     node  number        2402 deleted at time  2.6011E-02
+     node  number        2421 deleted at time  2.6011E-02
+     solid element        2238  failed at time  2.6011E-02
+     node  number         836 deleted at time  2.6011E-02
+     solid element        2253  failed at time  2.6011E-02
+     node  number        2403 deleted at time  2.6011E-02
+     node  number        2422 deleted at time  2.6011E-02
+     solid element        2254  failed at time  2.6011E-02
+     node  number         837 deleted at time  2.6011E-02
+     solid element        2269  failed at time  2.6011E-02
+     node  number        2404 deleted at time  2.6011E-02
+     node  number        2423 deleted at time  2.6011E-02
+     solid element        2270  failed at time  2.6011E-02
+     node  number         838 deleted at time  2.6011E-02
+     solid element        2285  failed at time  2.6011E-02
+     node  number        2405 deleted at time  2.6011E-02
+     node  number        2424 deleted at time  2.6011E-02
+     solid element        2286  failed at time  2.6011E-02
+     node  number         839 deleted at time  2.6011E-02
+     node  number         730 deleted at time  2.6011E-02
+     solid element        2301  failed at time  2.6011E-02
+     node  number        2406 deleted at time  2.6011E-02
+     node  number        2425 deleted at time  2.6011E-02
+     node  number        2228 deleted at time  2.6011E-02
+     node  number        2229 deleted at time  2.6011E-02
+     solid element        2302  failed at time  2.6011E-02
+     node  number        3270 deleted at time  2.6011E-02
+     node  number        3262 deleted at time  2.6011E-02
+     solid element        2637  failed at time  2.6011E-02
+     node  number        3321 deleted at time  2.6011E-02
+     node  number        3320 deleted at time  2.6011E-02
+     solid element        2653  failed at time  2.6011E-02
+     node  number        3322 deleted at time  2.6011E-02
+     node  number        3319 deleted at time  2.6011E-02
+     solid element        2669  failed at time  2.6011E-02
+     node  number        3323 deleted at time  2.6011E-02
+     node  number        3318 deleted at time  2.6011E-02
+     solid element        2685  failed at time  2.6011E-02
+     node  number        3324 deleted at time  2.6011E-02
+     node  number        3317 deleted at time  2.6011E-02
+     solid element        2701  failed at time  2.6011E-02
+     node  number        3325 deleted at time  2.6011E-02
+     node  number        3316 deleted at time  2.6011E-02
+     solid element        2717  failed at time  2.6011E-02
+     node  number        3326 deleted at time  2.6011E-02
+     node  number        3315 deleted at time  2.6011E-02
+     solid element        2733  failed at time  2.6011E-02
+     node  number        3327 deleted at time  2.6011E-02
+     node  number        3314 deleted at time  2.6011E-02
+     node  number        2178 deleted at time  2.6011E-02
+     node  number        2170 deleted at time  2.6011E-02
+     solid element        2749  failed at time  2.6011E-02
+     node  number           1 deleted at time  2.6011E-02
+     solid element        2765  failed at time  2.6011E-02
+     node  number        3275 deleted at time  2.6011E-02
+     node  number        3276 deleted at time  2.6011E-02
+     solid element        2766  failed at time  2.6011E-02
+     node  number         167 deleted at time  2.6011E-02
+     solid element        2781  failed at time  2.6011E-02
+     node  number        3356 deleted at time  2.6011E-02
+     node  number        3363 deleted at time  2.6011E-02
+     solid element        2782  failed at time  2.6011E-02
+     node  number         166 deleted at time  2.6011E-02
+     solid element        2797  failed at time  2.6011E-02
+     node  number        3357 deleted at time  2.6011E-02
+     node  number        3364 deleted at time  2.6011E-02
+     solid element        2798  failed at time  2.6011E-02
+     node  number         165 deleted at time  2.6011E-02
+     solid element        2813  failed at time  2.6011E-02
+     node  number        3358 deleted at time  2.6011E-02
+     node  number        3365 deleted at time  2.6011E-02
+     solid element        2814  failed at time  2.6011E-02
+     node  number         164 deleted at time  2.6011E-02
+     solid element        2829  failed at time  2.6011E-02
+     node  number        3359 deleted at time  2.6011E-02
+     node  number        3366 deleted at time  2.6011E-02
+     solid element        2830  failed at time  2.6011E-02
+     node  number         163 deleted at time  2.6011E-02
+     solid element        2845  failed at time  2.6011E-02
+     node  number        3360 deleted at time  2.6011E-02
+     node  number        3367 deleted at time  2.6011E-02
+     solid element        2846  failed at time  2.6011E-02
+     node  number         162 deleted at time  2.6011E-02
+     solid element        2861  failed at time  2.6011E-02
+     node  number        3361 deleted at time  2.6011E-02
+     node  number        3368 deleted at time  2.6011E-02
+     solid element        2862  failed at time  2.6011E-02
+     node  number         161 deleted at time  2.6011E-02
+     node  number          82 deleted at time  2.6011E-02
+     solid element        2877  failed at time  2.6011E-02
+     node  number        3362 deleted at time  2.6011E-02
+     node  number        3369 deleted at time  2.6011E-02
+     node  number        2183 deleted at time  2.6011E-02
+     node  number        2184 deleted at time  2.6011E-02
+     solid element        2878  failed at time  2.6011E-02
+ f a i l e d   e l e m e n t   r e p o r t  time=  2.6011E-02
+     number of failed solid  elements =         832
+     number of failed beam   elements =           0
+     number of failed shell  elements =           0
+     number of failed tshell elements =           0
+ 
+ *** Warning 40630 (SOL+630)
+     negative volume in solid element 1982 cycle 3 time= 3.9016E-02
+     node  number        2230 deleted at time  3.9016E-02
+
+      1 elements eroded due to negative volume.
+
+
+ failure due to negative volume.
+ 
+ *** Error 40510 (SOL+510)
+     complex sound speed in solid element # 2654 cycle 3
+ 
+ *** Error 40510 (SOL+510)
+     complex sound speed in solid element # 2654 cycle 3
+ 
+ *** Error 40510 (SOL+510)
+     complex sound speed in solid element # 2762 cycle 3
+ 
+ *** Error 40510 (SOL+510)
+     complex sound speed in solid element # 2762 cycle 3
+       3 t 3.9016E-02 dt 1.23E-03 write d3plot file            07/07/20 21:05:47
+       3 t 3.9016E-02 dt 1.23E-03 write d3plot file            07/07/20 21:05:47
+
+ E r r o r   t e r m i n a t i o n                             07/07/20 21:05:47
+
+ S t o r a g e   a l l o c a t i o n   
+
+ Memory required to complete solution   :     6378226 
+ Additional dynamically allocated memory:     3402418 
+                                   Total:     9780644 
+
+ T i m i n g   i n f o r m a t i o n
+                        CPU(seconds)   %CPU  Clock(seconds) %Clock
+  ----------------------------------------------------------------
+  Keyword Processing ... 1.0000E+00   33.33     7.1000E-01   19.83
+    KW Reading ......... 0.0000E+00    0.00     2.3600E-01    6.59
+    KW Writing ......... 0.0000E+00    0.00     1.5300E-01    4.27
+  Initialization ....... 1.0000E+00   33.33     1.5970E+00   44.61
+    Init Proc Phase 1 .. 1.0000E+00   33.33     5.2200E-01   14.58
+    Init Proc Phase 2 .. 0.0000E+00    0.00     2.3400E-01    6.54
+  Element processing ... 1.0000E+00   33.33     1.2090E+00   33.77
+    Solids ............. 1.0000E+00   33.33     1.1960E+00   33.41
+  Binary databases ..... 0.0000E+00    0.00     1.1000E-02    0.31
+  Contact algorithm .... 0.0000E+00    0.00     4.8000E-02    1.34
+    Interf. ID         1 0.0000E+00    0.00     1.1000E-02    0.31
+    Interf. ID         2 0.0000E+00    0.00     9.0000E-03    0.25
+    Interf. ID         3 0.0000E+00    0.00     1.4000E-02    0.39
+  Other ................ 0.0000E+00    0.00     5.0000E-03    0.14
+  ----------------------------------------------------------------
+  T o t a l s            3.0000E+00  100.00     3.5800E+00  100.00
+
+ Problem time       =    3.9016E-02
+ Problem cycle      =         3
+ Total CPU time     =         3 seconds (   0 hours  0 minutes  3 seconds)
+ CPU time per zone cycle  =     14487 nanoseconds
+ Clock time per zone cycle=     18442 nanoseconds
+
+ Number of CPU's    8
+ NLQ used/max     136/  136
+ Start time   07/07/2020 21:05:44  
+ End time     07/07/2020 21:05:47  
+ Elapsed time       3 seconds(   0 hours  0 min.  3 sec.) for       3 cycles
+
+ E r r o r   t e r m i n a t i o n                             07/07/20 21:05:47
